@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Your Hobby | Hobbyist Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="site-name" href="index.html">Hobbyist Lab</a>
+      <a class="nav-link" href="index.html#hobbies">Browse hobbies</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Let’s find your next hobby.</h1>
+    <p>
+      We’ll ask about your interests, budget, and free time
+      to help you choose where to start.
+    </p>
+    <form id="hobby-quiz">
+  <fieldset class="quiz-question">
+    <legend>What sounds most enjoyable right now?</legend>
+
+    <label class="quiz-option">
+      <input type="radio" name="interest" value="creative">
+      <span>Making something with my hands</span>
+    </label>
+
+    <label class="quiz-option">
+      <input type="radio" name="interest" value="outdoor">
+      <span>Getting outside and exploring</span>
+    </label>
+
+    <label class="quiz-option">
+      <input type="radio" name="interest" value="music">
+      <span>Playing music or experimenting with sound</span>
+    </label>
+  </fieldset>
+  <fieldset class="quiz-question">
+  <legend>How much time would you like to spend per session?</legend>
+
+  <label class="quiz-option">
+    <input type="radio" name="time" value="short">
+    <span>About 15 minutes</span>
+  </label>
+
+  <label class="quiz-option">
+    <input type="radio" name="time" value="long">
+    <span>30 minutes or more</span>
+  </label>
+</fieldset>
+  <button class="button" type="submit">See my suggestion →</button>
+<p id="quiz-result" role="status"></p>
+</form>
+  </main>
+  <script src="quiz.js"></script>
+</body>
+</html>
