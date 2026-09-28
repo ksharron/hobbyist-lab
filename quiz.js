@@ -45,8 +45,29 @@ form.addEventListener("submit", function (event) {
     link.href = activity.website;
     link.textContent = "Check visiting details →";
 
-    card.append(title, location, description, note, link);
-    results.append(card);
+card.append(title, location, description);
+
+if (activity.stops) {
+  const stopsList = document.createElement("div");
+  stopsList.className = "activity-stops";
+
+  activity.stops.forEach(function (stop) {
+    const stopRow = document.createElement("p");
+    const stopLink = document.createElement("a");
+
+    stopLink.href = stop.website;
+    stopLink.textContent = `${stop.name} — ${stop.address}`;
+
+    stopRow.append(stopLink);
+    stopsList.append(stopRow);
+  });
+
+  card.append(stopsList);
+  link.textContent = "Find the first stop on Google Maps →";
+}
+
+card.append(note, link);
+results.append(card);
   });
 });
 

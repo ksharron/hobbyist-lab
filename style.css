@@ -250,3 +250,18 @@ li p {
   color: #56645c;
   font-size: 15px;
 }
+.activity-stops {
+  margin: 20px 0;
+  padding-left: 16px;
+  border-left: 2px solid #d9ded6;
+}
+
+.activity-stops a {
+  color: #243d35;
+  text-underline-offset: 4px;
+}
+
+.activity-stops a:focus-visible {
+  outline: 2px solid #243d35;
+  outline-offset: 4px;
+}
