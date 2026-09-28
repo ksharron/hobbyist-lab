@@ -30,35 +30,35 @@ function showResults() {
   results.replaceChildren();
 
   if (matches.length === 0) {
-  summary.textContent = "No matching ideas yet.";
+    summary.textContent = "No matching ideas yet.";
 
-  const emptyCard = document.createElement("section");
-  emptyCard.className = "empty-result";
+    const emptyCard = document.createElement("section");
+    emptyCard.className = "empty-result";
 
-  const heading = document.createElement("h2");
-  heading.textContent = "A little change of plans?";
+    const heading = document.createElement("h2");
+    heading.textContent = "A little change of plans?";
 
-  const message = document.createElement("p");
-  message.textContent =
-    "We haven’t added an idea for this combination yet. Try another neighborhood, or see what else you could do in your selected area.";
+    const message = document.createElement("p");
+    message.textContent =
+      "We haven’t added an idea for this combination yet. Try another neighborhood, or see what else you could do in your selected area.";
 
-  const showMore = document.createElement("button");
-  showMore.type = "button";
-  showMore.className = "button";
-  showMore.textContent = "Explore other moods →";
+    const showMore = document.createElement("button");
+    showMore.type = "button";
+    showMore.className = "button";
+    showMore.textContent = "Explore other moods →";
 
-  showMore.addEventListener("click", function () {
-    form.querySelector(
-      'input[name="mood"][value="any"]'
-    ).checked = true;
+    showMore.addEventListener("click", function () {
+      form.querySelector(
+        'input[name="mood"][value="any"]'
+      ).checked = true;
 
-    showResults();
-  });
+      showResults();
+    });
 
-  emptyCard.append(heading, message, showMore);
-  results.append(emptyCard);
-  return;
-}
+    emptyCard.append(heading, message, showMore);
+    results.append(emptyCard);
+    return;
+  }
 
   summary.textContent =
     `${matches.length} ${matches.length === 1 ? "idea" : "ideas"} to explore.`;
@@ -85,6 +85,11 @@ function showResults() {
     const link = document.createElement("a");
     link.className = "button";
     link.href = activity.website;
+
+    // Open visiting details in a new tab
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
     link.textContent = "Check visiting details →";
 
     card.append(title, location, description);
@@ -98,6 +103,11 @@ function showResults() {
         const stopLink = document.createElement("a");
 
         stopLink.href = stop.website;
+
+        // Open each stop in a new tab
+        stopLink.target = "_blank";
+        stopLink.rel = "noopener noreferrer";
+
         stopLink.textContent =
           `${stop.name} — ${stop.address}`;
 

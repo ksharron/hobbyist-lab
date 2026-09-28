@@ -181,5 +181,34 @@ const activities = [
     visitNote:
       "Choose an upcoming New York event and confirm its location, price, materials, and booking requirements. This is a scheduled activity, not a drop-in studio visit.",
     website: "https://www.artsclubstudios.com/"
+  },
+
+  {
+    id: "tiny-cupboard",
+    active: true,
+    title: "Let someone else be funny for a while",
+    neighborhood: "bushwick",
+    place: "The Tiny Cupboard Comedy Club & Game Bar",
+    address: "10 Cooper Street",
+    category: "watch",
+    description:
+      "Catch a stand-up show, then stick around for games and drinks. Pick a comedian you’ve never heard of and see if you leave with a new favorite.",
+    visitNote:
+      "Check the current show calendar, ticket prices, age requirements, and game bar hours before visiting. Shows require tickets and schedules vary.",
+    website: "https://www.thetinycupboard.com/"
+  },
+  {
+    id: "syndicated",
+    active: true,
+    title: "See a movie with dinner attached",
+    neighborhood: "bushwick",
+    place: "Syndicated Bar Theater Kitchen",
+    address: "40 Bogart Street",
+    category: "watch",
+    description:
+      "Pick whatever sounds interesting on the movie calendar, order something to eat or drink, and settle in for a film somewhere more fun than your couch.",
+    visitNote:
+      "Check the current film schedule, showtimes, ticket prices, and age requirements before visiting. Food and drinks are priced separately.",
+    website: "https://syndicatedbk.com/"
   }
 ];

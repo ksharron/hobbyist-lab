@@ -26,9 +26,8 @@ header p {
 
 /* Keep the content centered and readable */
 main {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 70px 24px;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -59,12 +58,71 @@ ul {
   list-style: none;
 }
 
+/* Homepage activity category cards */
+ul {
+  counter-reset: activity-card;
+}
+
 li {
-  padding: 28px;
+  position: relative;
+  counter-increment: activity-card;
+  padding: 34px 30px 30px;
   background: #ffffff;
   border: 1px solid #d9ded6;
-  border-radius: 12px;
+  border-radius: 16px;
   font-weight: bold;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+li::before {
+  content: "0" counter(activity-card);
+  display: block;
+  margin-bottom: 28px;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+  color: #7a877f;
+}
+
+li::after {
+  content: "↗";
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  font-size: 20px;
+  font-weight: normal;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: translateY(-5px) rotate(-0.5deg);
+  border-color: #243d35;
+  box-shadow: 6px 7px 0 #dfe7dc;
+}
+
+li:hover::after {
+  transform: translate(3px, -3px);
+}
+.category-link {
+  display: block;
+  color: inherit;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.category-link:hover {
+  text-decoration: none;
+}
+
+.category-link:focus-visible {
+  outline: 2px solid #243d35;
+  outline-offset: 5px;
 }
 
 /* Navigation layout */
@@ -78,12 +136,59 @@ li {
   flex-wrap: wrap;
 }
 
-/* Site name links back to the homepage */
+/* Bored in NYC logo */
 .site-name {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
   color: #243d35;
-  font-size: 22px;
-  font-weight: bold;
   text-decoration: none;
+  line-height: 1;
+}
+
+.logo-main {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+.logo-bored {
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: -1.5px;
+}
+
+.logo-nyc {
+  position: relative;
+  top: -3px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transform: rotate(-3deg);
+}
+
+.logo-tagline {
+  margin-left: 3px;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  opacity: 0.65;
+}
+
+.site-name:hover .logo-bored {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.site-name:hover .logo-tagline {
+  opacity: 1;
 }
 
 /* Navigation link */
@@ -308,4 +413,90 @@ li p {
 
 #activity-results:not(:empty) {
   margin-top: 32px;
+}
+
+/* Homepage NYC hero */
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding: 80px max(7%, calc((100vw - 1000px) / 2));
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 40, 34, 0.82) 0%,
+      rgba(20, 40, 34, 0.62) 38%,
+      rgba(20, 40, 34, 0.25) 68%,
+      rgba(20, 40, 34, 0.08) 100%
+    ),
+    url("nyc-hero.jpg");
+
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero h1 {
+  margin: 0 0 28px;
+  max-width: 750px;
+  color: #ffffff;
+  font-family: Georgia, serif;
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  max-width: 570px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.hero-button {
+  margin-top: 30px;
+  background: #f8f5ef;
+  color: #243d35;
+}
+
+.hero-button:hover {
+  background: #ffffff;
+}
+
+/* Homepage section below the photo */
+.homepage-ideas {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 70px 24px 90px;
+}
+
+.homepage-ideas h2 {
+  margin-top: 0;
+}
+
+/* Make the hero work on smaller screens */
+@media (max-width: 700px) {
+  .hero {
+    min-height: 560px;
+    padding: 60px 24px;
+    background-position: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .homepage-ideas {
+    padding: 50px 20px 70px;
+  }
 }
