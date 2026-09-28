@@ -1,0 +1,68 @@
+/* Include padding and borders in element widths */
+* {
+  box-sizing: border-box;
+}
+
+/* Set the page's colors and default font */
+body {
+  margin: 0;
+  background: #f8f5ef;
+  color: #243d35;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Site name at the top */
+header {
+  padding: 20px 6%;
+  border-bottom: 1px solid #d9ded6;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+header p {
+  margin: 0;
+}
+
+/* Keep the content centered and readable */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+
+h1 {
+  max-width: 750px;
+  font-family: Georgia, serif;
+  font-size: clamp(36px, 6vw, 68px);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+main > p {
+  max-width: 560px;
+  color: #56645c;
+  font-size: 20px;
+}
+
+h2 {
+  margin-top: 60px;
+  font-size: 24px;
+}
+
+/* Arrange the hobby categories into cards */
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #d9ded6;
+  border-radius: 12px;
+  font-weight: bold;
+}
