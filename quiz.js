@@ -1,31 +1,56 @@
-const form = document.querySelector("#hobby-quiz");
-const result = document.querySelector("#quiz-result");
-
-const suggestions = {
-  creative: {
-    short: "Try a quick sketch! Spend 15 minutes drawing an everyday object.",
-    long: "Try collage! Arrange paper scraps into a picture or abstract design."
-  },
-  outdoor: {
-    short: "Try birdwatching! Spend 15 minutes noticing birds from a window or outside.",
-    long: "Try a nature walk! Explore a nearby park and notice plants, birds, and textures."
-  },
-  music: {
-    short: "Try singing! Practice one verse of a song you love.",
-    long: "Try body percussion! Learn a rhythm using claps and taps, then build on it."
-  }
-};
+const form = document.querySelector("#activity-quiz");
+const results = document.querySelector("#activity-results");
+const summary = document.querySelector("#results-summary");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const interest = form.querySelector('input[name="interest"]:checked');
-  const time = form.querySelector('input[name="time"]:checked');
+  const selected = form.querySelector(
+    'input[name="neighborhood"]:checked'
+  );
 
-  if (!interest || !time) {
-    result.textContent = "Please answer both questions to get your suggestion.";
-    return;
-  }
+  if (!selected) return;
 
-  result.textContent = suggestions[interest.value][time.value];
+  const matches = activities.filter(function (activity) {
+    return selected.value === "any" ||
+      activity.neighborhood === selected.value;
+  });
+
+  results.replaceChildren();
+
+  summary.textContent = matches.length === 0
+    ? "No ideas here yet. Try another neighborhood."
+    : `${matches.length} ${matches.length === 1 ? "idea" : "ideas"} to explore.`;
+
+  matches.forEach(function (activity) {
+    const card = document.createElement("article");
+    card.className = "activity-card";
+
+    const title = document.createElement("h2");
+    title.textContent = activity.title;
+
+    const location = document.createElement("p");
+    location.className = "activity-location";
+    location.textContent = `${activity.place} · ${activity.address}`;
+
+    const description = document.createElement("p");
+    description.textContent = activity.description;
+
+    const note = document.createElement("p");
+    note.className = "activity-note";
+    note.textContent = activity.visitNote;
+
+    const link = document.createElement("a");
+    link.className = "button";
+    link.href = activity.website;
+    link.textContent = "Check visiting details →";
+
+    card.append(title, location, description, note, link);
+    results.append(card);
+  });
+});
+
+form.addEventListener("change", function () {
+  results.replaceChildren();
+  summary.textContent = "";
 });
