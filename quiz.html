@@ -6,83 +6,298 @@
   <title>Find Something to Do | Bored in NYC</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="quiz-page">
+
   <header>
     <nav class="navbar" aria-label="Main navigation">
-      <a class="site-name" href="index.html">Bored in NYC</a>
+
+      <a href="index.html" class="site-name" aria-label="Bored in NYC — go do something">
+        <span class="logo-main">
+          <span class="logo-bored">Bored</span>
+          <span class="logo-nyc">in NYC</span>
+        </span>
+        <span class="logo-tagline">go do something.</span>
+      </a>
+
       <a class="nav-link" href="index.html#hobbies">Explore ideas</a>
+
     </nav>
   </header>
 
-  <main>
-    <h1>Where are we going?</h1>
-    <p>Pick a neighborhood. We’ll give you somewhere to start.</p>
+  <main class="quiz-main">
+
+    <div class="quiz-intro">
+      <p class="quiz-eyebrow">Three questions. Then go outside.</p>
+    </div>
 
     <form id="activity-quiz">
-      <fieldset class="quiz-question">
-        <legend>Which neighborhood sounds good?</legend>
 
-        <label class="quiz-option">
-          <input type="radio" name="neighborhood" value="east-village" required>
-          <span>East Village</span>
-        </label>
+      <div class="quiz-progress" aria-label="Quiz progress">
+        <span class="progress-step active" data-progress="1">01</span>
+        <span class="progress-line"></span>
+        <span class="progress-step" data-progress="2">02</span>
+        <span class="progress-line"></span>
+        <span class="progress-step" data-progress="3">03</span>
+      </div>
 
-        <label class="quiz-option">
-          <input type="radio" name="neighborhood" value="williamsburg" required>
-          <span>Williamsburg</span>
-        </label>
+      <!-- STEP 1: NEIGHBORHOOD -->
+      <fieldset class="quiz-step active" data-step="1">
+        <legend class="sr-only">Choose a neighborhood</legend>
 
-        <label class="quiz-option">
-  <input type="radio" name="neighborhood" value="bushwick" required>
-  <span>Bushwick</span>
-</label>
+        <p class="step-label">WHERE?</p>
 
-        <label class="quiz-option">
-          <input type="radio" name="neighborhood" value="any" required>
-          <span>I’m open to any of these</span>
-        </label>
+        <h1>Where are we going?</h1>
+
+        <p class="step-description">
+          Pick whichever sounds good right now.
+        </p>
+
+        <div class="choice-grid choice-grid-two">
+
+          <label class="choice-card">
+            <input
+              type="radio"
+              name="neighborhood"
+              value="east-village"
+              required
+            >
+            <span class="choice-content">
+              <span class="choice-title">East Village</span>
+              <span class="choice-description">
+                Downtown, busy, and full of things tucked into tiny spaces.
+              </span>
+              <span class="choice-arrow">↗</span>
+            </span>
+          </label>
+
+          <label class="choice-card">
+            <input
+              type="radio"
+              name="neighborhood"
+              value="williamsburg"
+              required
+            >
+            <span class="choice-content">
+              <span class="choice-title">Williamsburg</span>
+              <span class="choice-description">
+                Wanderable, creative, and easy to make an afternoon of.
+              </span>
+              <span class="choice-arrow">↗</span>
+            </span>
+          </label>
+
+          <label class="choice-card">
+            <input
+              type="radio"
+              name="neighborhood"
+              value="bushwick"
+              required
+            >
+            <span class="choice-content">
+              <span class="choice-title">Bushwick</span>
+              <span class="choice-description">
+                Studios, odd little spaces, and plenty to make or see.
+              </span>
+              <span class="choice-arrow">↗</span>
+            </span>
+          </label>
+
+          <label class="choice-card surprise-card">
+            <input
+              type="radio"
+              name="neighborhood"
+              value="any"
+              required
+            >
+            <span class="choice-content">
+              <span class="choice-title">Surprise me</span>
+              <span class="choice-description">
+                Don't make me make another decision.
+              </span>
+              <span class="choice-arrow">✦</span>
+            </span>
+          </label>
+
+        </div>
       </fieldset>
-<fieldset class="quiz-question">
-  <legend>What sounds good?</legend>
 
-  <label class="quiz-option">
-    <input type="radio" name="mood" value="create" required>
-    <span>Make something</span>
-  </label>
+      <!-- STEP 2: MOOD -->
+      <fieldset class="quiz-step" data-step="2" hidden>
+        <legend class="sr-only">Choose what sounds good</legend>
 
-  <label class="quiz-option">
-    <input type="radio" name="mood" value="browse" required>
-    <span>Browse shops</span>
-  </label>
+        <button class="quiz-back" type="button">← Back</button>
 
-  <label class="quiz-option">
-    <input type="radio" name="mood" value="wander" required>
-    <span>Wander</span>
-  </label>
+        <p class="step-label">WHAT?</p>
 
-  <label class="quiz-option">
-    <input type="radio" name="mood" value="hangout" required>
-    <span>Hang out</span>
-  </label>
+        <h1>What sounds good?</h1>
 
-  <label class="quiz-option">
-    <input type="radio" name="mood" value="watch" required>
-    <span>See a show</span>
-  </label>
+        <p class="step-description">
+          Don't overthink it. Pick the version of today that sounds nicest.
+        </p>
 
-  <label class="quiz-option">
-    <input type="radio" name="mood" value="any" required>
-    <span>I’m open to anything</span>
-  </label>
-</fieldset>
-      <button class="button" type="submit">Show me some ideas →</button>
+        <div class="choice-grid choice-grid-three">
+
+          <label class="choice-card compact-card">
+            <input type="radio" name="mood" value="create" required>
+            <span class="choice-content">
+              <span class="choice-title">Make something</span>
+              <span class="choice-description">
+                Draw, paint, write, build, or otherwise use your hands.
+              </span>
+              <span class="choice-arrow">↗</span>
+            </span>
+          </label>
+
+          <label class="choice-card compact-card">
+            <input type="radio" name="mood" value="browse" required>
+            <span class="choice-content">
+              <span class="choice-title">Browse around</span>
+              <span class="choice-description">
+                Books, vintage, furniture, strange objects. No purchase required.
+              </span>
+              <span class="choice-arrow">↗</span>
+            </span>
+          </label>
+
+          <label class="choice-card compact-card">
+            <input type="radio" name="mood" value="wander" required>
+            <span class="choice-content">
+              <span class="choice-title">Wander</span>
+              <span class="choice-description">
+                Give me somewhere to start and let me take it from there.
+              </span>
+              <span class="choice-arrow">↗</span>
+            </span>
+          </label>
+
+          <label class="choice-card compact-card">
+            <input type="radio" name="mood" value="hangout" required>
+            <span class="choice-content">
+              <span class="choice-title">Hang out</span>
+              <span class="choice-description">
+                Somewhere worth sitting for a while.
+              </span>
+              <span class="choice-arrow">↗</span>
+            </span>
+          </label>
+
+          <label class="choice-card compact-card">
+            <input type="radio" name="mood" value="watch" required>
+            <span class="choice-content">
+              <span class="choice-title">See something</span>
+              <span class="choice-description">
+                Comedy, movies, theatre — let someone else entertain me.
+              </span>
+              <span class="choice-arrow">↗</span>
+            </span>
+          </label>
+
+          <label class="choice-card compact-card surprise-card">
+            <input type="radio" name="mood" value="any" required>
+            <span class="choice-content">
+              <span class="choice-title">Surprise me</span>
+              <span class="choice-description">
+                You pick. That's why I'm here.
+              </span>
+              <span class="choice-arrow">✦</span>
+            </span>
+          </label>
+
+        </div>
+      </fieldset>
+
+      <!-- STEP 3: ENERGY -->
+      <fieldset class="quiz-step" data-step="3" hidden>
+        <legend class="sr-only">Choose your energy level</legend>
+
+        <button class="quiz-back" type="button">← Back</button>
+
+        <p class="step-label">HOW MUCH?</p>
+
+        <h1>How much are we doing today?</h1>
+
+        <p class="step-description">
+          Be realistic. Future you will appreciate it.
+        </p>
+
+        <div class="choice-grid energy-grid">
+
+          <label class="choice-card energy-card">
+            <input type="radio" name="energy" value="low" required>
+            <span class="choice-content">
+              <span class="energy-number">LOW KEY</span>
+              <span class="choice-title">Keep it easy</span>
+              <span class="choice-description">
+                Minimal planning. Minimal exertion. I would still like to leave my apartment.
+              </span>
+              <span class="choice-arrow">↗</span>
+            </span>
+          </label>
+
+          <label class="choice-card energy-card">
+            <input type="radio" name="energy" value="medium" required>
+            <span class="choice-content">
+              <span class="energy-number">UP FOR IT</span>
+              <span class="choice-title">I'm up for something</span>
+              <span class="choice-description">
+                I'll walk around, explore, and participate in a reasonable amount of activity.
+              </span>
+              <span class="choice-arrow">↗</span>
+            </span>
+          </label>
+
+          <label class="choice-card energy-card">
+            <input type="radio" name="energy" value="high" required>
+            <span class="choice-content">
+              <span class="energy-number">LET'S GO</span>
+              <span class="choice-title">Give me a whole thing</span>
+              <span class="choice-description">
+                A class, a show, an activity. I am willing to make actual plans.
+              </span>
+              <span class="choice-arrow">↗</span>
+            </span>
+          </label>
+
+        </div>
+      </fieldset>
+
     </form>
 
+   <!-- RESULTS -->
+<section class="quiz-results-section" hidden>
+
+  <button class="start-over" type="button">← Start over</button>
+
+  <div class="results-reveal">
+
+    <p class="step-label">WE HAVE A PLAN.</p>
+
+    <h1>Okay, here's what I'd do.</h1>
+
+    <p id="selection-summary" class="selection-summary"></p>
+
     <p id="results-summary" role="status"></p>
-    <div id="activity-results"></div>
+
+  </div>
+
+  <div id="featured-result"></div>
+
+  <div class="result-actions">
+    <p>Not feeling it?</p>
+    <button id="another-result" class="another-result" type="button">
+      Give me another one →
+    </button>
+  </div>
+
+  <div id="activity-results"></div>
+
+</section>
+
   </main>
 
   <script src="activities.js"></script>
   <script src="quiz.js"></script>
+
 </body>
 </html>

@@ -6,6 +6,7 @@ const activities = [
     place: "Creative Little Garden",
     address: "530 East 6th Street",
     category: "wander",
+    energy: ["low"],
     description:
       "Bring a notebook and sketch three small details you notice. No drawing skills required.",
     visitNote:
@@ -19,6 +20,7 @@ const activities = [
     place: "McNally Jackson",
     address: "76 North 4th Street, Unit G",
     category: "browse",
+    energy: ["low"],
     description:
       "Explore a section you normally skip. Find one book you would give a friend and one you would keep.",
     visitNote:
@@ -32,6 +34,7 @@ const activities = [
     place: "Mother of Junk",
     address: "567 Driggs Avenue",
     category: "browse",
+    energy: ["low"],
     description:
       "Browse secondhand odds and ends with a small mission: find something beautiful, something baffling, and something your grandmother definitely owned. Buying is optional.",
     visitNote:
@@ -46,6 +49,7 @@ const activities = [
     place: "Nook",
     address: "45 Irving Avenue",
     category: "create",
+    energy: ["low", "medium"],
     description:
       "Order something, put your phone away, and give yourself a small assignment: write a page, sketch your cup, or start the poem you keep thinking about.",
     visitNote:
@@ -59,6 +63,7 @@ const activities = [
     place: "Boyfriend Co-op",
     address: "1157 Myrtle Avenue",
     category: "hangout",
+    energy: ["low", "medium"],
     description:
       "Visit this queer coffee and cocktail cooperative with a book, a friend, or a notebook. Give yourself something to do that isn’t scrolling.",
     visitNote:
@@ -72,13 +77,14 @@ const activities = [
     place: "The Brooklyn Loft",
     address: "476 Jefferson Street",
     category: "create",
+    energy: ["medium", "high"],
     description:
       "Choose a figure-drawing session and spend some time drawing from a live model. Explore the schedule for themed sessions and other creative workshops.",
     visitNote:
       "Check the specific event for booking, price, materials, age requirements, and location. Sessions may feature clothed or nude models; this is a scheduled activity, not a walk-in visit.",
     website: "https://thebkloft.com/"
   },
-    {
+  {
     id: "chyelle",
     active: true,
     title: "Browse furniture. Leave with an idea.",
@@ -86,6 +92,7 @@ const activities = [
     place: "Chyelle",
     address: "199 Cook Street, #103",
     category: "browse",
+    energy: ["low", "medium"],
     description:
       "Explore vintage furniture and home goods, and imagine furnishing a room entirely unlike your own. For something hands-on, look out for creative classes hosted in the space.",
     visitNote:
@@ -93,7 +100,7 @@ const activities = [
     website:
       "https://www.google.com/maps/search/?api=1&query=Chyelle+199+Cook+Street+Brooklyn+NY"
   },
-    {
+  {
     id: "east-village-vintage",
     active: true,
     title: "Try on a different decade",
@@ -101,6 +108,7 @@ const activities = [
     place: "East Village vintage & secondhand trail",
     address: "Start on East 7th Street",
     category: "browse",
+    energy: ["medium"],
     description:
       "Start at AuH2O and Tokio7 across the street, then wander up to East Village Vintage Collective. Your mission: find something you would wear, something you wish you could pull off, and something that belongs in a music video.",
     visitNote:
@@ -121,11 +129,12 @@ const activities = [
       {
         name: "East Village Vintage Collective",
         address: "545 East 12th Street",
-        website: "https://eastvillagevintagecollective.com/pages/contact"
+        website:
+          "https://eastvillagevintagecollective.com/pages/contact"
       }
     ]
   },
-    {
+  {
     id: "drawing-room-williamsburg",
     active: true,
     title: "Give yourself an afternoon to make something",
@@ -133,13 +142,14 @@ const activities = [
     place: "Drawing Room Williamsburg: Creative Living",
     address: "101 North 10th Street, #206",
     category: "create",
+    energy: ["low", "medium"],
     description:
       "Bring an unfinished project or start with a blank page. Get a day pass for creative time in a shared studio, or explore the workshop calendar for a guided activity.",
     visitNote:
       "Check current day-pass prices and open hours before visiting. Basic drawing supplies are included; additional materials may cost extra. Workshops require separate booking. This is a shoes-off space, so bring socks or indoor slippers.",
     website: "https://www.nycdrawingroom.com/visit"
   },
-    {
+  {
     id: "recess-grove",
     active: true,
     title: "Trade your screen for a friendship bracelet",
@@ -147,13 +157,14 @@ const activities = [
     place: "Recess Grove",
     address: "327 Grand Street",
     category: "create",
+    energy: ["low", "medium"],
     description:
       "Order a drink and settle into the counter with origami, friendship bracelets, coloring supplies, or a game. Want more room to experiment? Explore a studio session or creative workshop.",
     visitNote:
       "The laptop-free counter accepts walk-ins and offers complimentary creative supplies. Budget separately for food and drinks. Studio sessions and classes have separate fees; check current hours, availability, and booking details.",
     website: "https://www.recessgrove.com/visit"
   },
-    {
+  {
     id: "orpheum-theatre",
     active: true,
     title: "Make a night of an Off-Broadway show",
@@ -161,6 +172,7 @@ const activities = [
     place: "Orpheum Theatre",
     address: "126 Second Avenue",
     category: "watch",
+    energy: ["low", "medium"],
     description:
       "See what’s playing at this East Village theatre and plan an evening around a live performance. Go with a friend, make it a date, or take yourself out.",
     visitNote:
@@ -176,13 +188,13 @@ const activities = [
     place: "ArtsClub",
     address: "311 East 3rd Street",
     category: "create",
+    energy: ["medium", "high"],
     description:
       "Try a guided art-making event that brings together creative practice, conversation, and inspiration from artists. No prior art experience needed.",
     visitNote:
       "Choose an upcoming New York event and confirm its location, price, materials, and booking requirements. This is a scheduled activity, not a drop-in studio visit.",
     website: "https://www.artsclubstudios.com/"
   },
-
   {
     id: "tiny-cupboard",
     active: true,
@@ -191,6 +203,7 @@ const activities = [
     place: "The Tiny Cupboard Comedy Club & Game Bar",
     address: "10 Cooper Street",
     category: "watch",
+    energy: ["medium"],
     description:
       "Catch a stand-up show, then stick around for games and drinks. Pick a comedian you’ve never heard of and see if you leave with a new favorite.",
     visitNote:
@@ -205,6 +218,7 @@ const activities = [
     place: "Syndicated Bar Theater Kitchen",
     address: "40 Bogart Street",
     category: "watch",
+    energy: ["low", "medium"],
     description:
       "Pick whatever sounds interesting on the movie calendar, order something to eat or drink, and settle in for a film somewhere more fun than your couch.",
     visitNote:
