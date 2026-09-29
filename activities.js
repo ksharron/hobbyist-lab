@@ -101,39 +101,60 @@ const activities = [
       "https://www.google.com/maps/search/?api=1&query=Chyelle+199+Cook+Street+Brooklyn+NY"
   },
   {
-    id: "east-village-vintage",
-    active: true,
-    title: "Try on a different decade",
-    neighborhood: "east-village",
-    place: "East Village vintage & secondhand trail",
-    address: "Start on East 7th Street",
-    category: "browse",
-    energy: ["medium"],
-    description:
-      "Start at AuH2O and Tokio7 across the street, then wander up to East Village Vintage Collective. Your mission: find something you would wear, something you wish you could pull off, and something that belongs in a music video.",
-    visitNote:
-      "Pick one stop or explore all three. Check each shop’s hours before going; they are not all open every day. Buying is optional, and prices vary widely.",
-    website:
-      "https://www.google.com/maps/search/?api=1&query=AuH2O+84+East+7th+Street+New+York",
-    stops: [
-      {
-        name: "AuH2O",
-        address: "84 East 7th Street",
-        website: "https://www.auh2oshop.com/"
-      },
-      {
-        name: "Tokio7",
-        address: "83 East 7th Street",
-        website: "https://tokio7ny.com/"
-      },
-      {
-        name: "East Village Vintage Collective",
-        address: "545 East 12th Street",
-        website:
-          "https://eastvillagevintagecollective.com/pages/contact"
-      }
-    ]
-  },
+  id: "east-village-vintage",
+  active: true,
+  title: "Try on a different decade",
+  neighborhood: "east-village",
+  place: "East Village vintage & secondhand trail",
+  address: "Start wherever looks good",
+  category: "browse",
+  energy: ["medium"],
+  description:
+    "Give yourself an afternoon to dig through vintage, thrift, and secondhand shops. Pick a few stops, try on something unexpected, and see what you find.",
+  visitNote:
+    "Pick one stop or make a trail of it. Check individual store hours before going; inventory, prices, and opening days vary.",
+  website:
+    "https://www.google.com/maps/search/?api=1&query=vintage+shops+East+Village+NYC",
+  stops: [
+    {
+      name: "AuH2O",
+      address: "84 East 7th Street",
+      website: "https://www.auh2oshop.com/"
+    },
+    {
+      name: "Tokio7",
+      address: "83 East 7th Street",
+      website: "https://tokio7ny.com/"
+    },
+    {
+      name: "9th St. Vintage",
+      address: "346 East 9th Street",
+      website: "https://www.9thstvintage.com/"
+    },
+    {
+      name: "East Village Vintage Collective",
+      address: "545 East 12th Street",
+      website: "https://eastvillagevintagecollective.com/"
+    },
+    {
+      name: "Mag New York City",
+      address: "66 Avenue A",
+      website:
+        "https://www.google.com/maps/search/?api=1&query=Mag+New+York+City+66+Avenue+A+New+York"
+    },
+    {
+      name: "East Village Thrift Shop",
+      address: "186 Second Avenue",
+      website:
+        "https://www.google.com/maps/search/?api=1&query=East+Village+Thrift+Shop+186+Second+Avenue+New+York"
+    },
+    {
+      name: "3rd & B'zaar",
+      address: "191 East 3rd Street",
+      website: "https://3rdandbzaar.com/"
+    }
+  ]
+},
   {
     id: "drawing-room-williamsburg",
     active: true,
@@ -224,5 +245,439 @@ const activities = [
     visitNote:
       "Check the current film schedule, showtimes, ticket prices, and age requirements before visiting. Food and drinks are priced separately.",
     website: "https://syndicatedbk.com/"
-  }
+  },
+  /* =========================================================
+   NEW ACTIVITIES
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   EAST VILLAGE — MOVIE
+   --------------------------------------------------------- */
+
+{
+  id: "village-east-movie",
+  active: true,
+  title: "See a movie somewhere with a little history",
+  neighborhood: "east-village",
+  place: "Village East by Angelika",
+  address: "181–189 Second Avenue",
+  category: "watch",
+  energy: ["low", "medium"],
+  description:
+    "See what's playing at this historic East Village movie theater and make a night of it. Pick whatever sounds interesting, grab a seat, and let someone else decide what happens for the next two hours.",
+  visitNote:
+    "Check current showtimes, ticket prices, and screening details before visiting.",
+  website:
+    "https://www.angelikafilmcenter.com/villageeast"
+},
+
+
+/* ---------------------------------------------------------
+   WILLIAMSBURG — MOVIE
+   --------------------------------------------------------- */
+
+{
+  id: "nitehawk-williamsburg",
+  active: true,
+  title: "Have dinner and a movie at the same time",
+  neighborhood: "williamsburg",
+  place: "Nitehawk Cinema Williamsburg",
+  address: "136 Metropolitan Avenue",
+  category: "watch",
+  energy: ["low", "medium"],
+  description:
+    "Pick a movie, settle into your seat, and order food and drinks without having to choose between dinner and a film. Check the calendar for new releases, old favorites, and stranger screenings.",
+  visitNote:
+    "Check current showtimes, ticket availability, age requirements, and menu details before visiting. Food and drinks are priced separately.",
+  website:
+    "https://nitehawkcinema.com/williamsburg/"
+},
+
+
+/* ---------------------------------------------------------
+   WILLIAMSBURG — ARTISTS & FLEAS
+   --------------------------------------------------------- */
+
+{
+  id: "artists-and-fleas-williamsburg",
+  active: true,
+  title: "See what the makers brought this weekend",
+  neighborhood: "williamsburg",
+  place: "Artists & Fleas",
+  address: "70 North 7th Street",
+  category: "browse",
+  energy: ["low", "medium"],
+  description:
+    "Wander through a rotating market of independent makers, vintage sellers, artists, designers, and collectors. Give yourself permission to look at absolutely everything and buy absolutely nothing.",
+  visitNote:
+    "The Williamsburg market currently operates on weekends. Check current hours and vendor information before visiting.",
+  website:
+    "https://www.artistsandfleas.com/williamsburg/"
+},
+
+
+/* ---------------------------------------------------------
+   WILLIAMSBURG — VINTAGE TRAIL
+   --------------------------------------------------------- */
+
+{
+  id: "williamsburg-vintage",
+  active: true,
+  title: "Go vintage hunting in Williamsburg",
+  neighborhood: "williamsburg",
+  place: "Williamsburg vintage & secondhand trail",
+  address: "Start wherever looks good",
+  category: "browse",
+  energy: ["medium"],
+  description:
+    "Give yourself a few racks to dig through. Mix big secondhand stores with smaller curated vintage shops and see whether you find something worth carrying home.",
+  visitNote:
+    "Choose a couple of stops or make an afternoon of it. Check current hours before visiting; inventory and prices vary.",
+  website:
+    "https://www.google.com/maps/search/?api=1&query=vintage+shops+Williamsburg+Brooklyn",
+  stops: [
+    {
+      name: "Monk Vintage",
+      address: "500 Driggs Avenue",
+      website:
+        "https://www.google.com/maps/search/?api=1&query=Monk+Vintage+500+Driggs+Avenue+Brooklyn"
+    },
+    {
+      name: "Other People's Clothes",
+      address: "150 Marcy Avenue",
+      website:
+        "https://www.otherpeoplesclothes.shop/opc-williamsburg"
+    },
+    {
+      name: "Brooklyn Woke Vintage",
+      address: "158 Bedford Avenue",
+      website:
+        "https://www.google.com/maps/search/?api=1&query=Brooklyn+Woke+Vintage+158+Bedford+Avenue+Brooklyn"
+    },
+    {
+      name: "2nd STREET Williamsburg",
+      address: "187 Kent Avenue",
+      website:
+        "https://2ndstreetusa.com/find-a-store"
+    },
+    {
+      name: "Awoke Vintage",
+      address: "132 North 5th Street",
+      website:
+        "https://www.awokevintage.com/pages/visit-us"
+    }
+  ]
+},
+
+
+/* ---------------------------------------------------------
+   BUSHWICK — VINTAGE TRAIL
+   --------------------------------------------------------- */
+
+{
+  id: "bushwick-vintage",
+  active: true,
+  title: "Go vintage hunting in Bushwick",
+  neighborhood: "bushwick",
+  place: "Bushwick vintage & secondhand trail",
+  address: "Start wherever looks good",
+  category: "browse",
+  energy: ["medium"],
+  description:
+    "Spend an afternoon digging through everything from big thrift-store racks to smaller curated vintage shops. Your only assignment is to find one thing you'd never have searched for online.",
+  visitNote:
+    "Choose a few stops rather than trying to do everything. Check current hours before visiting; inventory and prices change constantly.",
+  website:
+    "https://www.google.com/maps/search/?api=1&query=vintage+shops+Bushwick+Brooklyn",
+  stops: [
+    {
+      name: "28 Scott Vintage",
+      address: "108 Thames Street",
+      website:
+        "https://www.28scott.com/"
+    },
+    {
+      name: "Harmonk",
+      address: "Bushwick",
+      website:
+        "https://www.google.com/maps/search/?api=1&query=Harmonk+Vintage+Bushwick+Brooklyn"
+    },
+    {
+      name: "fronk.",
+      address: "87 George Street, #118",
+      website:
+        "https://www.google.com/maps/search/?api=1&query=fronk+87+George+Street+Brooklyn"
+    },
+    {
+      name: "Select Vintage",
+      address: "191 Wilson Avenue",
+      website:
+        "https://www.google.com/maps/search/?api=1&query=Select+Vintage+191+Wilson+Avenue+Brooklyn"
+    },
+    {
+      name: "Urban Jungle",
+      address: "118 Knickerbocker Avenue",
+      website:
+        "https://www.google.com/maps/search/?api=1&query=Urban+Jungle+118+Knickerbocker+Avenue+Brooklyn"
+    }
+  ]
+},
+
+
+/* ---------------------------------------------------------
+   BUSHWICK — FLEA MARKET
+   --------------------------------------------------------- */
+
+{
+  id: "bushwick-flea",
+  active: true,
+  title: "Go to the flea market with no shopping list",
+  neighborhood: "bushwick",
+  place: "Bushwick Flea",
+  address: "52 Wyckoff Avenue",
+  category: "browse",
+  energy: ["medium"],
+  description:
+    "Browse whatever happens to be there: vintage clothes, objects, art, furniture, records, and things you absolutely did not know you needed five minutes ago.",
+  visitNote:
+    "Market schedules and vendors can change, so confirm that the flea market is running before making a dedicated trip.",
+  website:
+    "https://www.google.com/maps/search/?api=1&query=Bushwick+Flea+52+Wyckoff+Avenue+Brooklyn"
+},
+
+
+/* ---------------------------------------------------------
+   EAST VILLAGE — SELL YOUR CLOTHES
+   --------------------------------------------------------- */
+
+{
+  id: "east-village-sell-clothes",
+  active: true,
+  title: "Sell the clothes you keep saying you'll sell",
+  neighborhood: "east-village",
+  place: "East Village resale shops",
+  address: "Second Avenue + East 11th Street",
+  category: "browse",
+  energy: ["medium"],
+  description:
+    "Fill a bag with the clothes you've been meaning to get rid of and see whether you can turn them into cash or store credit. Anything they don't take can finally move on to its next destination.",
+  visitNote:
+    "Buying policies, accepted items, wait times, ID requirements, and payout options vary. Check each shop's current selling instructions before bringing a bag.",
+  website:
+    "https://www.google.com/maps/search/?api=1&query=clothing+resale+East+Village+NYC",
+  stops: [
+    {
+      name: "Crossroads Trading",
+      address: "122 Second Avenue",
+      website:
+        "https://crossroadstrading.com/location/new-york-2nd-ave/"
+    },
+    {
+      name: "Buffalo Exchange",
+      address: "332 East 11th Street",
+      website:
+        "https://buffaloexchange.com/location/east-village-new-york/"
+    }
+  ]
+},
+
+
+/* ---------------------------------------------------------
+   EAST VILLAGE — WEIRD LITTLE SHOPS
+   --------------------------------------------------------- */
+
+{
+  id: "east-village-little-shops",
+  active: true,
+  title: "Go look at extremely specific little things",
+  neighborhood: "east-village",
+  place: "East Village odd little shop trail",
+  address: "Start around East 9th–11th Streets",
+  category: "browse",
+  energy: ["medium"],
+  description:
+    "Forget practical shopping. Browse stationery, rubber stamps, art, gifts, vintage objects, books, and whatever else catches your eye in a handful of very specific East Village shops.",
+  visitNote:
+    "Pick whichever stops sound interesting and check current hours before visiting. Buying anything is entirely optional.",
+  website:
+    "https://www.google.com/maps/search/?api=1&query=independent+shops+East+Village+NYC",
+  stops: [
+    {
+      name: "Spooksvilla + Friends",
+      address: "309 East 9th Street",
+      website:
+        "https://www.shopspooksvilla.com/"
+    },
+    {
+      name: "niconeco zakkaya",
+      address: "263 East 10th Street",
+      website:
+        "https://www.niconeco.com/"
+    },
+    {
+      name: "Casey Rubber Stamps",
+      address: "322 East 11th Street",
+      website:
+        "https://www.caseyrubberstamps.com/"
+    },
+    {
+      name: "Theo's Haberdashery",
+      address: "East Village",
+      website:
+        "https://theoshaberdashery.com/"
+    },
+    {
+      name: "Village Works",
+      address: "12 St. Marks Place",
+      website:
+        "https://www.google.com/maps/search/?api=1&query=Village+Works+12+St+Marks+Place+New+York"
+    }
+  ]
+},
+
+
+/* ---------------------------------------------------------
+   EAST VILLAGE — RECORD SHOPPING
+   --------------------------------------------------------- */
+
+{
+  id: "east-village-records",
+  active: true,
+  title: "Spend an afternoon flipping through records",
+  neighborhood: "east-village",
+  place: "East Village record shop trail",
+  address: "Start wherever your taste takes you",
+  category: "browse",
+  energy: ["medium"],
+  description:
+    "Go crate digging with no particular record in mind. Flip through new releases, used vinyl, rare pressings, and things you've never heard of until something makes you stop.",
+  visitNote:
+    "Inventory changes constantly, which is the point. Pick a few stops and check current hours before visiting.",
+  website:
+    "https://www.google.com/maps/search/?api=1&query=record+stores+East+Village+NYC",
+  stops: [
+    {
+      name: "A-1 Record Shop",
+      address: "439 East 6th Street",
+      website:
+        "https://www.a-1recordshop.com/"
+    },
+    {
+      name: "Limited to One",
+      address: "221 East 10th Street, Basement West",
+      website:
+        "https://www.limitedtooneshop.com/"
+    },
+    {
+      name: "Stranded Records",
+      address: "218 East 5th Street",
+      website:
+        "https://www.strandedrecords.com/"
+    },
+    {
+      name: "Ergot Records",
+      address: "East Village",
+      website:
+        "https://www.google.com/maps/search/?api=1&query=Ergot+Records+New+York"
+    },
+    {
+      name: "Academy Records",
+      address: "415 East 12th Street",
+      website:
+        "https://www.google.com/maps/search/?api=1&query=Academy+Records+415+East+12th+Street+New+York"
+    },
+    {
+      name: "Manhattan 45",
+      address: "East Village",
+      website:
+        "https://www.google.com/maps/search/?api=1&query=Manhattan+45+Records+New+York"
+    }
+  ]
+},
+
+
+/* ---------------------------------------------------------
+   WILLIAMSBURG — RECORD SHOPPING
+   --------------------------------------------------------- */
+
+{
+  id: "williamsburg-records",
+  active: true,
+  title: "Go record shopping in Williamsburg",
+  neighborhood: "williamsburg",
+  place: "Williamsburg record shop trail",
+  address: "Start wherever your taste takes you",
+  category: "browse",
+  energy: ["medium"],
+  description:
+    "Spend an afternoon flipping through records instead of scrolling through playlists. Pick a few shops, browse slowly, and leave with a recommendation or something you didn't know you wanted.",
+  visitNote:
+    "Check current store hours before visiting. Inventory changes constantly and purchases are optional.",
+  website:
+    "https://www.google.com/maps/search/?api=1&query=record+stores+Williamsburg+Brooklyn",
+  stops: [
+    {
+      name: "Earwax Records",
+      address: "167 North 9th Street",
+      website:
+        "https://earwaxrecords.squarespace.com/"
+    },
+    {
+      name: "Human Head Records",
+      address: "289 Meserole Street",
+      website:
+        "https://www.humanheadnyc.co/"
+    },
+    {
+      name: "Superior Elevation Records",
+      address: "616 Grand Street",
+      website:
+        "https://www.superiorelevation.com/"
+    }
+  ]
+},
+
+
+/* ---------------------------------------------------------
+   BUSHWICK — RECORD SHOPPING
+   --------------------------------------------------------- */
+
+{
+  id: "bushwick-records",
+  active: true,
+  title: "Go crate digging in Bushwick",
+  neighborhood: "bushwick",
+  place: "Bushwick record shop trail",
+  address: "Start wherever your taste takes you",
+  category: "browse",
+  energy: ["medium"],
+  description:
+    "Pick a couple of record stores and spend some time actually flipping through music. Look for something familiar, something strange, and one album whose cover alone almost convinces you to buy it.",
+  visitNote:
+    "Check current hours before visiting. Some shops keep small-business schedules, and inventory changes constantly.",
+  website:
+    "https://www.google.com/maps/search/?api=1&query=record+stores+Bushwick+Brooklyn",
+  stops: [
+    {
+      name: "Secondhand Records",
+      address: "23 Lawton Street",
+      website:
+        "https://www.instagram.com/secondhandrecordsnyc/"
+    },
+    {
+      name: "Vinyl Fantasy",
+      address: "194 Knickerbocker Avenue",
+      website:
+        "https://vinylfantasybk.com/"
+    },
+    {
+      name: "Rebel Rouser",
+      address: "867 Broadway",
+      website:
+        "https://www.instagram.com/rebelrousernyc/"
+    }
+  ]
+}
+
 ];

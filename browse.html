@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Browse Ideas | Bored in NYC</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="browse-page">
+
+  <!-- ===================================================
+       HEADER
+       =================================================== -->
+
+  <header>
+
+    <nav class="navbar" aria-label="Main navigation">
+
+      <a
+        href="index.html"
+        class="site-name"
+        aria-label="Bored in NYC — go do something"
+      >
+
+        <span class="logo-main">
+          <span class="logo-bored">Bored</span>
+          <span class="logo-nyc">in NYC</span>
+        </span>
+
+        <span class="logo-tagline">
+          go do something.
+        </span>
+
+      </a>
+
+
+      <a class="nav-link" href="quiz.html">
+        Take the quiz
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ===================================================
+       MAIN
+       =================================================== -->
+
+  <main class="browse-main">
+
+
+    <!-- INTRO -->
+
+    <section class="browse-intro">
+
+      <p class="browse-eyebrow">
+        NO QUIZ REQUIRED.
+      </p>
+
+      <h1>
+        Browse everything.
+      </h1>
+
+      <p class="browse-subtitle">
+        Poke around until something sounds better than staying home.
+      </p>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         FILTERS
+         =================================================== -->
+
+    <section
+      class="browse-filters"
+      aria-label="Filter activities"
+    >
+
+
+      <!-- ACTIVITY TYPE -->
+
+      <div class="filter-group">
+
+        <p class="filter-label">
+          I WANT TO...
+        </p>
+
+        <div class="filter-options" data-filter-group="category">
+
+          <button
+            class="filter-button active"
+            type="button"
+            data-value="any"
+          >
+            Anything
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-value="create"
+          >
+            Make something
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-value="browse"
+          >
+            Browse around
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-value="wander"
+          >
+            Wander
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-value="hangout"
+          >
+            Hang out
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-value="watch"
+          >
+            See something
+          </button>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- NEIGHBORHOOD -->
+
+      <div class="filter-group">
+
+        <p class="filter-label">
+          WHERE?
+        </p>
+
+        <div class="filter-options" data-filter-group="neighborhood">
+
+          <button
+            class="filter-button active"
+            type="button"
+            data-value="any"
+          >
+            Anywhere
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-value="east-village"
+          >
+            East Village
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-value="williamsburg"
+          >
+            Williamsburg
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-value="bushwick"
+          >
+            Bushwick
+          </button>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ENERGY -->
+
+      <div class="filter-group">
+
+        <p class="filter-label">
+          ENERGY?
+        </p>
+
+        <div class="filter-options" data-filter-group="energy">
+
+          <button
+            class="filter-button active"
+            type="button"
+            data-value="any"
+          >
+            Any
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-value="low"
+          >
+            Keep it easy
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-value="medium"
+          >
+            I'm up for something
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-value="high"
+          >
+            Give me a whole thing
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ===================================================
+         RESULTS
+         =================================================== -->
+
+    <section class="browse-results-section">
+
+      <div class="browse-results-header">
+
+        <p
+          id="browse-count"
+          class="browse-count"
+          aria-live="polite"
+        >
+        </p>
+
+        <button
+          id="clear-filters"
+          class="clear-filters"
+          type="button"
+          hidden
+        >
+          Clear filters
+        </button>
+
+      </div>
+
+
+      <div
+        id="browse-results"
+        class="browse-grid"
+      >
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ===================================================
+       DATA + PAGE JAVASCRIPT
+       =================================================== -->
+
+  <script src="activities.js"></script>
+  <script src="browse.js"></script>
+
+</body>
+
+</html>

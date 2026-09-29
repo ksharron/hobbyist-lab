@@ -1,79 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Bored in NYC | Find something creative to do</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
   <header>
+
     <nav class="navbar" aria-label="Main navigation">
 
-      <a href="index.html" class="site-name" aria-label="Bored in NYC — go do something">
+      <a
+        href="index.html"
+        class="site-name"
+        aria-label="Bored in NYC — go do something"
+      >
+
         <span class="logo-main">
           <span class="logo-bored">Bored</span>
           <span class="logo-nyc">in NYC</span>
         </span>
-        <span class="logo-tagline">go do something.</span>
+
+        <span class="logo-tagline">
+          go do something.
+        </span>
+
       </a>
 
-      <a class="nav-link" href="#hobbies">Explore ideas</a>
+
+      <a class="nav-link" href="#hobbies">
+        Explore ideas
+      </a>
 
     </nav>
+
   </header>
+
 
   <main>
 
+
+    <!-- ===================================================
+         HERO
+         =================================================== -->
+
     <section class="hero">
+
       <div class="hero-content">
 
-        <h1>A whole city outside.<br>No idea what to do?</h1>
+        <h1>
+          A whole city outside.<br>
+          No idea what to do?
+        </h1>
+
 
         <p>
-          Find something creative to do in NYC based on your
-          neighborhood, budget, and how much energy you have.
+          Answer three quick questions and we'll find something to do based on
+          your neighborhood, what sounds good, and how much energy you have.
         </p>
 
-        <a class="button hero-button" href="quiz.html">
-          Find me something to do →
+
+        <a
+          class="button hero-button"
+          href="quiz.html"
+        >
+          Take the quiz →
         </a>
 
       </div>
-    </section>
-
-    <section class="homepage-ideas">
-
-      <h2 id="hobbies">What kind of afternoon are you after?</h2>
-
-      <ul>
-        <li>
-          Make something
-          <p>
-            Get your hands into paint, paper, clay, or something new.
-          </p>
-        </li>
-
-        <li>
-          Wander with a purpose
-          <p>
-            A little exploring, with somewhere specific to start.
-          </p>
-        </li>
-
-        <li>
-          Find a new favorite spot
-          <p>
-            Shops and creative spaces worth stepping inside.
-          </p>
-        </li>
-      </ul>
 
     </section>
+
+
+
+    <!-- ===================================================
+         BROWSE STARTING POINTS
+         =================================================== -->
+
+    <section
+      class="homepage-ideas"
+      id="hobbies"
+    >
+
+      <p class="homepage-ideas-label">
+        OR BROWSE FOR YOURSELF
+      </p>
+
+
+      <h2>
+        What kind of afternoon are you after?
+      </h2>
+
+
+      <div class="homepage-idea-grid">
+
+
+        <!-- MAKE SOMETHING -->
+
+        <a
+          class="homepage-idea-card"
+          href="browse.html?category=create"
+        >
+
+          <span class="homepage-idea-arrow">
+            ↗
+          </span>
+
+          <h3>
+            Make something
+          </h3>
+
+          <p>
+            Get your hands into paint, paper, clay,
+            or something new.
+          </p>
+
+        </a>
+
+
+
+        <!-- WANDER -->
+
+        <a
+          class="homepage-idea-card"
+          href="browse.html?category=wander"
+        >
+
+          <span class="homepage-idea-arrow">
+            ↗
+          </span>
+
+          <h3>
+            Wander with a purpose
+          </h3>
+
+          <p>
+            A little exploring, with somewhere
+            specific to start.
+          </p>
+
+        </a>
+
+
+
+        <!-- BROWSE -->
+
+        <a
+          class="homepage-idea-card"
+          href="browse.html?category=browse"
+        >
+
+          <span class="homepage-idea-arrow">
+            ↗
+          </span>
+
+          <h3>
+            Find a new favorite spot
+          </h3>
+
+          <p>
+            Shops and creative spaces worth
+            stepping inside.
+          </p>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
 
   </main>
 
 </body>
+
 </html>
