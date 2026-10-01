@@ -29,6 +29,8 @@ const neighborhoodLabels = {
   "east-village": "East Village",
   "williamsburg": "Williamsburg",
   "bushwick": "Bushwick",
+  "anywhere": "Anywhere",
+  "park-slope": "Park Slope",
   "any": "Any neighborhood"
 };
 
@@ -363,8 +365,9 @@ function showResults() {
       activity.active !== false;
 
     const matchesNeighborhood =
-      neighborhood.value === "any" ||
-      activity.neighborhood === neighborhood.value;
+  neighborhood.value === "any" ||
+  activity.neighborhood === "anywhere" ||
+  activity.neighborhood === neighborhood.value;
 
     const matchesMood =
       mood.value === "any" ||

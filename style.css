@@ -2366,4 +2366,59 @@ body.browse-page a.browse-stop:hover {
     min-height: 0;
   }
 
+} 
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+/* =========================================================
+   MOBILE ICONS — MATCH DESKTOP
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* Use the same typography for icons as desktop */
+  .choice-arrow,
+  .browse-card-arrow,
+  .browse-card-symbol,
+  .browse-stop-arrow,
+  .backup-arrow,
+  .homepage-idea-arrow {
+    font-family: Georgia, serif !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+
+    /* Prevent phone emoji rendering where possible */
+    font-variant-emoji: text;
+
+    color: #243d35;
+  }
+
+
+  /* Standard external-link arrow */
+  .choice-arrow,
+  .browse-card-arrow,
+  .browse-stop-arrow,
+  .backup-arrow,
+  .homepage-idea-arrow {
+    font-size: 20px;
+  }
+
+
+  /* Special / surprise icon */
+  .browse-card-symbol {
+    font-size: 18px;
+  }
+
 }

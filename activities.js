@@ -152,6 +152,12 @@ const activities = [
       name: "3rd & B'zaar",
       address: "191 East 3rd Street",
       website: "https://3rdandbzaar.com/"
+    },
+    {
+      name: "Flamingos Vintage Pound",
+      address: "4 St Marks Pl",
+      website:
+        "https://maps.app.goo.gl/Gqw5a31bRzSH3gqEA"
     }
   ]
 },
@@ -420,7 +426,7 @@ const activities = [
       address: "118 Knickerbocker Avenue",
       website:
         "https://www.google.com/maps/search/?api=1&query=Urban+Jungle+118+Knickerbocker+Avenue+Brooklyn"
-    }
+    },
   ]
 },
 
@@ -678,6 +684,470 @@ const activities = [
         "https://www.instagram.com/rebelrousernyc/"
     }
   ]
-}
+},
+ /* =========================================================
+   MORE WANDERING, ART & MUSEUM IDEAS
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   EAST VILLAGE — RADICAL HISTORY
+   --------------------------------------------------------- */
+
+{
+  id: "morus",
+  active: true,
+  title: "Take a walk through the radical history of the East Village",
+  neighborhood: "east-village",
+  place: "Museum of Reclaimed Urban Space",
+  address: "155 Avenue C",
+  category: "wander",
+  energy: ["medium", "high"],
+  description:
+    "Start at this tiny museum of grassroots activism, then explore the neighborhood through the history of community gardens, squats, public space, and the people who fought to shape it.",
+  visitNote:
+    "You can visit the museum itself or check the schedule for a guided neighborhood walking tour. Tours are scheduled separately, so confirm current dates, times, and prices before going.",
+  website:
+    "https://morusnyc.org/"
+},
+
+
+/* ---------------------------------------------------------
+   EAST VILLAGE — EXPERIMENTAL FILM
+   --------------------------------------------------------- */
+
+{
+  id: "anthology-film-archives",
+  active: true,
+  title: "See something you probably wouldn't find at a multiplex",
+  neighborhood: "east-village",
+  place: "Anthology Film Archives",
+  address: "32 Second Avenue",
+  category: "watch",
+  energy: ["low", "medium"],
+  description:
+    "Check the calendar and pick a screening that sounds interesting, strange, beautiful, or completely unfamiliar. This is the place to try experimental, independent, avant-garde, and repertory cinema.",
+  visitNote:
+    "Screenings change frequently. Check the current film calendar, showtime, and ticket information before visiting.",
+  website:
+    "https://www.anthologyfilmarchives.org/"
+},
+
+
+/* ---------------------------------------------------------
+   WILLIAMSBURG — TINY NYC MUSEUM
+   --------------------------------------------------------- */
+
+{
+  id: "city-reliquary",
+  active: true,
+  title: "Look at a museum full of extremely New York things",
+  neighborhood: "williamsburg",
+  place: "The City Reliquary",
+  address: "370 Metropolitan Avenue",
+  category: "wander",
+  energy: ["low", "medium"],
+  description:
+    "Explore a tiny neighborhood museum packed with New York artifacts, ephemera, oddities, and pieces of everyday city history that somebody decided were worth keeping.",
+  visitNote:
+    "Check current museum hours and admission information before visiting. It's small, so this pairs well with wandering around Williamsburg afterward.",
+  website:
+    "https://www.cityreliquary.org/"
+},
+
+
+/* ---------------------------------------------------------
+   WILLIAMSBURG — ART & HISTORY
+   Currently closed — retained for future reopening
+   --------------------------------------------------------- */
+
+{
+  id: "wah-center",
+  active: false,
+  title: "Wander through art in an old Williamsburg landmark",
+  neighborhood: "williamsburg",
+  place: "Williamsburg Art & Historical Center",
+  address: "135 Broadway",
+  category: "wander",
+  energy: ["low", "medium"],
+  description:
+    "Explore exhibitions and events inside the landmark former Kings County Savings Bank building at the foot of the Williamsburg Bridge.",
+  visitNote:
+    "The WAH Center is currently closed until further notice following significant water damage. Keep this activity inactive until the center announces that it has reopened.",
+  website:
+    "https://www.wahcenter.net/"
+},
+
+
+/* ---------------------------------------------------------
+   BUSHWICK — BONE MUSEUM
+   --------------------------------------------------------- */
+
+{
+  id: "bone-museum",
+  active: true,
+  title: "Go look at a frankly unreasonable number of bones",
+  neighborhood: "bushwick",
+  place: "The Bone Museum",
+  address: "255 McKibbin Street",
+  category: "wander",
+  energy: ["low", "medium"],
+  description:
+    "Spend some time learning what human skeletons can tell us about anatomy, pathology, trauma, medicine, and history. Weird enough to feel like an outing; educational enough to justify it.",
+  visitNote:
+    "Check current opening hours, admission information, and visitor policies before going.",
+  website:
+    "https://www.thebonemuseum.org/"
+},
+
+
+/* ---------------------------------------------------------
+   BUSHWICK — STREET ART
+   --------------------------------------------------------- */
+
+{
+  id: "bushwick-collective",
+  active: true,
+  title: "Go mural hunting",
+  neighborhood: "bushwick",
+  place: "The Bushwick Collective",
+  address: "Start around Troutman Street & St. Nicholas Avenue",
+  category: "wander",
+  energy: ["medium", "high"],
+  description:
+    "Walk around the Bushwick Collective and see how many murals you can find. Don't worry about following a perfect route — turn whenever something interesting catches your eye.",
+  visitNote:
+    "The murals are outdoors and spread across multiple blocks. Wear comfortable shoes, be respectful of residents and businesses, and remember that the artwork changes over time.",
+  website:
+    "https://thebushwickcollective.com/"
+},
+
+
+/* ---------------------------------------------------------
+   BUSHWICK — LIVING GALLERY
+   --------------------------------------------------------- */
+
+{
+  id: "living-gallery",
+  active: true,
+  title: "See what someone's making in Bushwick",
+  neighborhood: "bushwick",
+  place: "The Living Gallery",
+  address: "1094 Broadway",
+  category: "wander",
+  energy: ["medium"],
+  description:
+    "Drop into a community art space built around emerging artists, exhibitions, events, classes, performances, and whatever creative thing happens to be going on that week.",
+  visitNote:
+    "This isn't a conventional museum with all-day daily hours. Check the current exhibition, class, or event schedule before making a dedicated trip.",
+  website:
+    "http://www.the-living-gallery.com/"
+},
+
+
+/* ---------------------------------------------------------
+   WILLIAMSBURG — DOMINO PARK
+   --------------------------------------------------------- */
+
+{
+  id: "domino-park",
+  active: true,
+  title: "Do absolutely nothing productive by the water",
+  neighborhood: "williamsburg",
+  place: "Domino Park",
+  address: "15 River Street",
+  category: "wander",
+  energy: ["low", "medium"],
+  description:
+    "Get there before sunset and give yourself no real agenda. Walk the waterfront, sketch the skyline, take photos, people-watch, or find somewhere to sit and stay until the lights start coming on.",
+  visitNote:
+    "The park is outdoors and open daily. Check the weather before going; sunset timing changes throughout the year.",
+  website:
+    "https://www.dominopark.com/"
+},
+
+
+/* ---------------------------------------------------------
+   BUSHWICK — MARIA HERNANDEZ PARK
+   --------------------------------------------------------- */
+
+{
+  id: "maria-hernandez-park",
+  active: true,
+  title: "Spend an hour at Bushwick's neighborhood living room",
+  neighborhood: "bushwick",
+  place: "Maria Hernandez Park",
+  address: "Knickerbocker Avenue & Starr Street",
+  category: "wander",
+  energy: ["low", "medium", "high"],
+  description:
+    "Walk a lap and then pick your activity: shoot around on the basketball courts, people-watch from a bench, sketch, read, bring something to eat, or see what's happening around the park.",
+  visitNote:
+    "This is an outdoor public park, so weather and court availability matter. Bring your own basketball, sketchbook, book, or whatever else you want to do.",
+  website:
+    "https://www.google.com/maps/search/?api=1&query=Maria+Hernandez+Park+Brooklyn+NY"
+},
+
+
+/* ---------------------------------------------------------
+   PARK SLOPE — PROSPECT PARK
+   --------------------------------------------------------- */
+
+{
+  id: "prospect-park",
+  active: true,
+  title: "Do everything or nothing in some quasi-nature",
+  neighborhood: "park-slope",
+  place: "Prospect Park",
+  address: "Brooklyn, NY",
+  category: "wander",
+  energy: ["low", "medium"],
+  description:
+    "There's no way to do Prospect Park wrong. Bring a volleyball, a sketchbook, a bike, or your walking shoes and give your afternoon to the park. Bonuses: Botanical Gardens, dog beach, and waterfalls!",
+  visitNote:
+    "The park is outdoors and open daily. Off-leash hours 6-9am and 9pm-1am. Check the weather before going.",
+  website:
+    "https://www.prospectpark.org/"
+},
+
+/* ---------------------------------------------------------
+   PARK SLOPE — BROWNSTONES AT SUNSET/DUSK
+   --------------------------------------------------------- */
+
+{
+  id: "brownstones",
+  active: true,
+  title: "Walk through streets of brownstones at sunset or dusk",
+  neighborhood: "park-slope",
+  place: "Park Slope Streets",
+  address: "Park Slope, NY",
+  category: "wander",
+  energy: ["low"],
+  description:
+    "Whip out that digicam or use nature's gifts (your eyes) and watch the sun set or rise as you walk through the Park Slope brownstones. Extra vibes in October and December with holiday decorations.",
+  visitNote:
+    "Check the weather. These are people's houses... Don't be creepy!!",
+  website:
+    "https://maps.app.goo.gl/jFShdKVXGRf8CQr38"
+},
+
+/* ---------------------------------------------------------
+   PARK SLOPE — LIVE MUSIC
+   --------------------------------------------------------- */
+
+{
+  id: "live-music",
+  active: true,
+  title: "Enjoy live music at Barbès",
+  neighborhood: "park-slope",
+  place: "Barbès",
+  address: "376 9th St",
+  category: "watch",
+  energy: ["low", "medium"],
+  description:
+    "Live music and dancing at Barbès, a Diet Coke (not sponsored), your journal, and a dream are all you need.",
+  visitNote:
+    "5pm-2am during the week, 2pm-3am on the weekends.",
+  website:
+    "https://www.barbesbrooklyn.com/"
+},
+
+/* ---------------------------------------------------------
+   PARK SLOPE — UNION HALL
+   --------------------------------------------------------- */
+
+{
+  id: "comedy-shows-ps",
+  active: true,
+  title: "See a comedy show, enjoy live music, or play some bocce ball at Union Hall",
+  neighborhood: "park-slope",
+  place: "Union Hall",
+  address: "702 Union St",
+  category: "watch",
+  energy: ["high", "medium"],
+  description:
+    "Browse Union Hall's calendar to see what live show (music or comedy) you should catch next! Not game to think ahead? Show up anytime for some bocce ball or enjoy a drink in their outdoor garden seating.",
+  visitNote:
+    "Check hours before visiting.",
+  website:
+    "https://unionhallny.com/food-drink"
+},
+
+
+/* ---------------------------------------------------------
+   PARK SLOPE — WEIRD SHOPS
+   --------------------------------------------------------- */
+{
+  id: "park-slope-shopping",
+  active: true,
+  title: "Explore the oddities of Park Slope",
+  neighborhood: "park-slope",
+  place: "Park Slope Shops",
+  address: "Start at the shop nearest your closest Subway stop!",
+  category: "browse",
+  energy: ["medium"],
+  description:
+    "Find something you'd love to see in your house and something that would send you running home if you saw it in your most recent hookup's bedroom.",
+  visitNote:
+    "Check current hours before visiting.",
+  website:
+    "https://www.google.com/maps/search/?api=1&query=weird+shops+Park+Slope+Brooklyn",
+  stops: [
+    {
+      name: "Annie's Blue Ribbon General Store",
+      address: "232 5th Ave",
+      website:
+        "http://blueribbongeneralstore.com/"
+    },
+    {
+      name: "Leroy's Place",
+      address: "353 7th Ave",
+      website:
+        "http://www.leroysplace.com/"
+    },
+    {
+      name: "From Here to Sunday",
+      address: "567 Union St",
+      website:
+        "http://heretosunday.com/"
+    },
+    {
+      name: "Sterling Place",
+      address: "352 7th Ave",
+      website:
+      "http://www.sterlingplace.com/"
+    }
+  ]
+},
+
+/* ---------------------------------------------------------
+   PARK SLOPE — WEIRD SHOPS
+   --------------------------------------------------------- */
+{
+  id: "park-slope-bookstores",
+  active: true,
+  title: "Find a book at one of Park Slope's iconic bookstores",
+  neighborhood: "park-slope",
+  place: "Park Slope Bookstores",
+  address: "Wherever you want, mama",
+  category: "browse",
+  energy: ["medium"],
+  description:
+    "Find something you could binge read, or something you would recommend to your parent to improve their emotional intelligence. Grab a crossword book and sit around waiting for someone to recruit you to the CIA.",
+  visitNote:
+    "Check current hours before visiting.",
+  website:
+    "https://www.google.com/maps/search/?api=1&query=bookstore+Park+Slope+Brooklyn",
+  stops: [
+    {
+      name: "Community Bookstore",
+      address: "143 7th Ave",
+      website:
+        "https://www.communitybookstore.net/"
+    },
+    {
+      name: "Troubled Sleep",
+      address: "129 6th Ave",
+      website:
+        "https://www.instagram.com/troubledsleepbooks"
+    },
+    {
+      name: "The Ripped Bodice",
+      address: "218 5th Ave",
+      website:
+        "https://therippedbodice.com/"
+    }
+  ]
+},
+
+/* ---------------------------------------------------------
+   PARK SLOPE — SIP AND PLAY
+   --------------------------------------------------------- */
+
+{
+  id: "board-game-cafe",
+  active: true,
+  title: "Play a board game and drink a boba or a beer",
+  neighborhood: "park-slope",
+  place: "Sip & Play",
+  address: "471 5th Ave",
+  category: "hangout",
+  energy: ["medium"],
+  description:
+    "Enjoy a board game or a card game, alone or with friends, and grab a drink or a snack. Be kind to their games, enjoy yourself, and play some Backgammon for me.",
+  visitNote:
+    "$10 a person for 3 hours of gameplay.",
+  website:
+    "https://www.sipnplaynyc.com/"
+},
+
+/* ---------------------------------------------------------
+   ANYWHERE - ADD NEIGHBORHOOD SPECIFIC ACTIVITIES ABOVE THESE ALWAYS PLS
+   --------------------------------------------------------- */
+   
+   /* ---------------------------------------------------------
+   COLOR HUNT
+   --------------------------------------------------------- */
+
+{
+  id: "color-hunt",
+  active: true,
+  title: "Go on a color hunt",
+  neighborhood: "anywhere",
+  place: "Anywhere in the city",
+  address: "Start wherever you are",
+  category: "wander",
+  energy: ["low", "medium"],
+  description:
+    "Pick one very specific color — not just blue, but cobalt blue; not just yellow, but butter yellow. Walk until you've photographed 10 things that match it.",
+  visitNote:
+    "No screenshots and no counting things you brought with you. The point is to start noticing what's already around you.",
+  website:
+    "https://www.google.com/maps"
+},
+
+
+/* ---------------------------------------------------------
+   ALPHABET HUNT
+   --------------------------------------------------------- */
+
+{
+  id: "alphabet-hunt",
+  active: true,
+  title: "Find the alphabet hiding in the city",
+  neighborhood: "anywhere",
+  place: "Anywhere in the city",
+  address: "Start wherever you are",
+  category: "wander",
+  energy: ["low", "medium"],
+  description:
+    "Find all 26 letters hiding in architecture, shadows, plants, railings, cracks, fire escapes, and random objects. Photograph each one. Q is going to be annoying.",
+  visitNote:
+    "No written letters, signs, storefront names, license plates, or typography allowed. You're looking for shapes that happen to resemble letters.",
+  website:
+    "https://www.google.com/maps"
+},
+
+
+/* ---------------------------------------------------------
+   PHOTO SCAVENGER HUNT
+   --------------------------------------------------------- */
+
+{
+  id: "photo-scavenger-hunt",
+  active: true,
+  title: "Give your walk a scavenger hunt",
+  neighborhood: "anywhere",
+  place: "Anywhere in the city",
+  address: "Start wherever you are",
+  category: "wander",
+  energy: ["low", "medium"],
+  description:
+    "Walk until you've photographed seven things: something older than you, something smaller than your hand, something that shouldn't be outside, something handmade, something abandoned, something heart-shaped, and something you don't understand.",
+  visitNote:
+    "There is no correct route and no time limit. Don't move, damage, or trespass onto anything for the sake of completing the list.",
+  website:
+    "https://www.google.com/maps"
+},
 
 ];

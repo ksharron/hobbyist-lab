@@ -27,7 +27,9 @@ const filters = {
 const neighborhoodLabels = {
   "east-village": "East Village",
   "williamsburg": "Williamsburg",
-  "bushwick": "Bushwick"
+  "bushwick": "Bushwick",
+  "anywhere": "Anywhere",
+  "park-slope": "Park Slope"
 };
 
 const categoryLabels = {
@@ -472,9 +474,10 @@ function renderActivities() {
       activity.category === filters.category;
 
 
-    const matchesNeighborhood =
-      filters.neighborhood === "any" ||
-      activity.neighborhood === filters.neighborhood;
+ const matchesNeighborhood =
+  filters.neighborhood === "any" ||
+  activity.neighborhood === "anywhere" ||
+  activity.neighborhood === filters.neighborhood;
 
 
     const matchesEnergy =
