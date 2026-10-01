@@ -2459,3 +2459,131 @@ body.browse-page a.browse-stop:hover {
   font-weight: normal;
   line-height: 1;
 }
+
+/* =========================================================
+   HOMEPAGE ARROWS — CSS DRAWN, NEVER EMOJI
+   ========================================================= */
+
+.homepage-idea-arrow {
+  position: absolute;
+  top: 27px;
+  right: 28px;
+
+  width: 18px;
+  height: 18px;
+
+  font-size: 0 !important;
+}
+
+/* diagonal line */
+.homepage-idea-arrow::before {
+  content: "";
+  position: absolute;
+
+  width: 18px;
+  height: 2px;
+
+  top: 8px;
+  left: 0;
+
+  background: #243d35;
+  border-radius: 2px;
+
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+/* arrow head */
+.homepage-idea-arrow::after {
+  content: "";
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  top: 0;
+  right: 0;
+
+  border-top: 2px solid #243d35;
+  border-right: 2px solid #243d35;
+}
+
+/* keep your little hover movement */
+.homepage-idea-card:hover .homepage-idea-arrow {
+  transform: translate(4px, -4px);
+}
+
+/* =========================================================
+   CSS-DRAWN ARROWS — HOMEPAGE + QUIZ + BROWSE
+   Prevents iOS from rendering ↗ as an emoji
+   ========================================================= */
+
+.homepage-idea-arrow,
+.choice-arrow,
+.browse-card-arrow,
+.browse-stop-arrow,
+.backup-arrow {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  flex-shrink: 0;
+
+  /* Hide any ↗ character still inside the element */
+  font-size: 0 !important;
+
+  position: relative;
+}
+
+/* Diagonal shaft */
+.homepage-idea-arrow::before,
+.choice-arrow::before,
+.browse-card-arrow::before,
+.browse-stop-arrow::before,
+.backup-arrow::before {
+  content: "";
+  position: absolute;
+
+  width: 18px;
+  height: 2px;
+
+  top: 8px;
+  left: 0;
+
+  background: #243d35;
+  border-radius: 2px;
+
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+/* Arrow head */
+.homepage-idea-arrow::after,
+.choice-arrow::after,
+.browse-card-arrow::after,
+.browse-stop-arrow::after,
+.backup-arrow::after {
+  content: "";
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  top: 0;
+  right: 0;
+
+  border-top: 2px solid #243d35;
+  border-right: 2px solid #243d35;
+}
+
+/* Homepage arrow stays in top-right corner */
+.homepage-idea-arrow {
+  position: absolute;
+  top: 27px;
+  right: 28px;
+}
+
+/* Preserve your existing hover movement */
+.homepage-idea-card:hover .homepage-idea-arrow,
+.browse-card:hover .browse-card-arrow {
+  transform: translate(4px, -4px);
+}

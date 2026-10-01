@@ -196,9 +196,9 @@ function createStandardCard(activity) {
     ].toUpperCase();
 
 
-  const arrow = document.createElement("span");
-  arrow.className = "browse-card-arrow";
-  arrow.textContent = "↗";
+ const arrow = document.createElement("span");
+arrow.className = "browse-card-arrow";
+arrow.setAttribute("aria-hidden", "true");
 
 
   top.append(
@@ -370,10 +370,10 @@ function createMultiStopCard(activity) {
 
     /* Arrow */
 
-    const stopArrow = document.createElement("span");
+const stopArrow = document.createElement("span");
 
-    stopArrow.className = "browse-stop-arrow";
-    stopArrow.textContent = "↗";
+stopArrow.className = "browse-stop-arrow";
+stopArrow.setAttribute("aria-hidden", "true");
 
 
     stopLink.append(
