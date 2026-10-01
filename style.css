@@ -2422,3 +2422,40 @@ body.browse-page a.browse-stop:hover {
   }
 
 }
+
+/* =========================================================
+   FORCE TEXT ARROWS — NO MOBILE EMOJIS
+   ========================================================= */
+
+.choice-arrow,
+.browse-card-arrow,
+.browse-stop-arrow,
+.backup-arrow,
+.homepage-idea-arrow {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  color: #243d35;
+}
+
+/* Replace existing arrow visually with a text arrow */
+.choice-arrow,
+.browse-card-arrow,
+.browse-stop-arrow,
+.backup-arrow,
+.homepage-idea-arrow {
+  font-size: 0 !important;
+}
+
+.choice-arrow::after,
+.browse-card-arrow::after,
+.browse-stop-arrow::after,
+.backup-arrow::after,
+.homepage-idea-arrow::after {
+  content: "\2197\FE0E";
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
