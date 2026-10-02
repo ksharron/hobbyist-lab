@@ -48,7 +48,7 @@ const activities = [
     neighborhood: "bushwick",
     place: "Nook",
     address: "45 Irving Avenue",
-    category: "create",
+    category: "hangout",
     energy: ["low", "medium"],
     description:
       "Order something, put your phone away, and give yourself a small assignment: write a page, sketch your cup, or start the poem you keep thinking about.",
@@ -1080,6 +1080,75 @@ const activities = [
   website:
     "https://www.sipnplaynyc.com/"
 },
+
+/* ---------------------------------------------------------
+   PARK SLOPE — ART CAFE
+   --------------------------------------------------------- */
+
+{
+  id: "art-collective-cafe",
+  active: true,
+  title: "See something, hear something, make something",
+  neighborhood: "park-slope",
+  place: "Art Collective Cafe",
+  address: "97 7th Ave",
+  category: "hangout",
+  energy: ["low", "medium"],
+  description:
+    "Get inspired by local visual and performing artists. Sip on a coffee, wine, or handcrafted cocktail and create something of your own!",
+  visitNote:
+    "Check their website for daily hours as they vary. Budget for a drink and/or a bite. Have fun!",
+  website:
+    "https://artcollectivecafe.com/"
+},
+
+/* ---------------------------------------------------------
+   PARK SLOPE — ART CLASSES
+   --------------------------------------------------------- */
+
+{
+  id: "art-classes",
+  active: true,
+  title: "Get your hands dirty (wash them after)",
+  neighborhood: "park-slope",
+  place: "Park Slope Art Classes",
+  address: "THE Slope",
+  category: "create",
+  energy: ["high"],
+  description:
+    "Book a class or a workshop and make something old, something new, maybe even something borrowed and/or blue! Don't forget an open mind and you'll have a good time.",
+  visitNote:
+    "Book classes ahead of time. Check website and booking info for any necessary materials.",
+  website:
+    "https://www.google.com/search?q=art+classes+park+slope",
+  stops: [
+    {
+      name: "GasWorks NYC",
+      address: "673 5th Ave",
+      website:
+        "https://gasworksnyc.com/"
+    },
+    {
+      name: "The Art Annex",
+      address: "413A 7th Ave",
+      website:
+        "https://www.theartannexbrooklyn.com/adult-classes"
+    },
+        {
+      name: "The Painted Pot",
+      address: "188 5th Ave",
+      website:
+        "https://www.paintedpot.com/"
+    },
+    {
+      name: "The Craft Salon",
+      address: "1101 Church Ave",
+      website:
+        "https://www.instagram.com/thecraftsalon/"
+    }
+  ]
+},
+
 
 /* ---------------------------------------------------------
    ANYWHERE - ADD NEIGHBORHOOD SPECIFIC ACTIVITIES ABOVE THESE ALWAYS PLS
