@@ -142,7 +142,156 @@ function renderFeaturedResult(activity) {
   description.className = "featured-description";
   description.textContent = activity.description;
 
+  /* Multiple stops */
 
+let stopsBlock = null;
+
+if (activity.stops && activity.stops.length > 0) {
+
+  stopsBlock = document.createElement("div");
+  stopsBlock.className = "featured-stops";
+
+  const stopsButton = document.createElement("button");
+  stopsButton.type = "button";
+  stopsButton.className = "stops-toggle";
+
+  const stopCount = activity.stops.length;
+
+  stopsButton.textContent =
+    `See ${stopCount} ${stopCount === 1 ? "stop" : "stops"} ↓`;
+
+  const stopsList = document.createElement("div");
+  stopsList.className = "stops-list";
+  stopsList.hidden = true;
+
+  activity.stops.forEach(function (stop) {
+
+    const stopItem = document.createElement("div");
+    stopItem.className = "stop-item";
+
+    const stopInfo = document.createElement("div");
+    stopInfo.className = "stop-info";
+
+    const stopName = document.createElement("p");
+    stopName.className = "stop-name";
+    stopName.textContent = stop.name;
+
+    const stopAddress = document.createElement("p");
+    stopAddress.className = "stop-address";
+    stopAddress.textContent = stop.address;
+
+    stopInfo.append(
+      stopName,
+      stopAddress
+    );
+
+    const stopLink = document.createElement("a");
+    stopLink.className = "stop-link";
+    stopLink.href = stop.website;
+    stopLink.target = "_blank";
+    stopLink.rel = "noopener noreferrer";
+    stopLink.textContent = "↗";
+    stopLink.setAttribute(
+      "aria-label",
+      `Visit ${stop.name} website`
+    );
+
+    stopItem.append(
+      stopInfo,
+      stopLink
+    );
+
+    stopsList.append(stopItem);
+  });
+
+  stopsButton.addEventListener("click", function () {
+
+    const opening = stopsList.hidden;
+
+    stopsList.hidden = !opening;
+
+    stopsButton.textContent = opening
+      ? "Hide stops ↑"
+      : `See ${stopCount} ${stopCount === 1 ? "stop" : "stops"} ↓`;
+  });
+
+  stopsBlock.append(
+    stopsButton,
+    stopsList
+  );
+}
+/* Multiple locations */
+
+let locationsBlock = null;
+
+if (activity.locations && activity.locations.length > 0) {
+
+  locationsBlock = document.createElement("div");
+  locationsBlock.className = "featured-locations";
+
+  const locationsButton = document.createElement("button");
+  locationsButton.type = "button";
+  locationsButton.className = "locations-toggle";
+
+  const locationCount = activity.locations.length;
+
+  locationsButton.textContent =
+    `See ${locationCount} locations ↓`;
+
+  const locationsList = document.createElement("div");
+  locationsList.className = "locations-list";
+  locationsList.hidden = true;
+
+  activity.locations.forEach(function (spot) {
+
+    const locationItem = document.createElement("div");
+    locationItem.className = "location-item";
+
+    const locationName = document.createElement("p");
+    locationName.className = "location-name";
+    locationName.textContent = spot.name || spot.place;
+
+    locationItem.append(locationName);
+
+    if (spot.address) {
+      const address = document.createElement("p");
+      address.className = "location-address";
+      address.textContent = spot.address;
+      locationItem.append(address);
+    }
+
+    if (spot.website) {
+      const locationLink = document.createElement("a");
+
+      locationLink.href = spot.website;
+      locationLink.target = "_blank";
+      locationLink.rel = "noopener noreferrer";
+
+      locationLink.className = "location-link";
+      locationLink.textContent = "details ↗";
+
+      locationItem.append(locationLink);
+    }
+
+    locationsList.append(locationItem);
+  });
+
+  locationsButton.addEventListener("click", function () {
+
+    const isOpen = !locationsList.hidden;
+
+    locationsList.hidden = isOpen;
+
+    locationsButton.textContent = isOpen
+      ? `See ${locationCount} locations ↓`
+      : `Hide locations ↑`;
+  });
+
+  locationsBlock.append(
+    locationsButton,
+    locationsList
+  );
+}
   /* Tags */
 
   const tags = document.createElement("div");
@@ -184,15 +333,22 @@ function renderFeaturedResult(activity) {
 
   /* Build featured card */
 
-  card.append(
-    topRow,
-    title,
-    location,
-    description,
-    tags,
-    note,
-    link
-  );
+card.append(
+  topRow,
+  title,
+  location,
+  description
+);
+
+if (stopsBlock) {
+  card.append(stopsBlock);
+}
+
+card.append(
+  tags,
+  note,
+  link
+);
 
   featuredResult.append(card);
 
@@ -246,82 +402,231 @@ function renderBackupResults() {
   grid.className = "backup-grid";
 
 
-  /* Individual backup cards */
+ backups.forEach(function (activity) {
 
-  backups.forEach(function (activity) {
-    const card = document.createElement("a");
+  const hasStops =
+    activity.stops &&
+    activity.stops.length > 0;
 
-    card.className = "backup-card";
+  /*
+   * Single-location activities remain links.
+   * Multi-stop activities become expandable articles.
+   */
+  const card = document.createElement(
+    hasStops ? "article" : "a"
+  );
+
+  card.className = "backup-card";
+
+  if (!hasStops) {
     card.href = activity.website;
     card.target = "_blank";
     card.rel = "noopener noreferrer";
+  }
 
 
-    /* Top row */
+  /* ---------- Top row ---------- */
 
-    const top = document.createElement("div");
-    top.className = "backup-card-top";
+  const top = document.createElement("div");
+  top.className = "backup-card-top";
 
-    const neighborhood =
-      document.createElement("span");
+  const neighborhood =
+    document.createElement("span");
 
-    neighborhood.className =
-      "backup-neighborhood";
+  neighborhood.className =
+    "backup-neighborhood";
 
-    neighborhood.textContent =
-      neighborhoodLabels[
-        activity.neighborhood
-      ].toUpperCase();
-
-    const arrow =
-      document.createElement("span");
-
-    arrow.className = "backup-arrow";
-    arrow.textContent = "↗";
-
-    top.append(neighborhood, arrow);
+  neighborhood.textContent =
+    neighborhoodLabels[
+      activity.neighborhood
+    ].toUpperCase();
 
 
-    /* Activity title */
+  const arrow =
+    document.createElement("span");
 
-    const title =
-      document.createElement("h3");
+  arrow.className = "backup-arrow";
 
-    title.textContent = activity.title;
+  /*
+   * Normal card = external-link arrow
+   * Multi-stop card = expand arrow
+   */
+  arrow.textContent = hasStops ? "↓" : "↗";
 
-
-    /* Place */
-
-    const place =
-      document.createElement("p");
-
-    place.className = "backup-place";
-    place.textContent = activity.place;
+  top.append(neighborhood, arrow);
 
 
-    /* Short description */
+  /* ---------- Title ---------- */
 
-    const description =
-      document.createElement("p");
+  const title =
+    document.createElement("h3");
 
-    description.className =
-      "backup-description";
-
-    description.textContent =
-      activity.description;
+  title.textContent = activity.title;
 
 
-    /* Build backup card */
+  /* ---------- Place ---------- */
 
-    card.append(
-      top,
-      title,
-      place,
-      description
+  const place =
+    document.createElement("p");
+
+  place.className = "backup-place";
+  place.textContent = activity.place;
+
+
+  /* ---------- Description ---------- */
+
+  const description =
+    document.createElement("p");
+
+  description.className =
+    "backup-description";
+
+  description.textContent =
+    activity.description;
+
+
+  /* ---------- Build basic card ---------- */
+
+  card.append(
+    top,
+    title,
+    place,
+    description
+  );
+
+
+  /* =================================================
+     MULTIPLE STOPS
+     ================================================= */
+
+  if (hasStops) {
+
+    card.classList.add("backup-card-expandable");
+
+    const stopsList =
+      document.createElement("div");
+
+    stopsList.className =
+      "backup-stops-list";
+
+    stopsList.hidden = true;
+
+
+    activity.stops.forEach(function (stop) {
+
+      const stopItem =
+        document.createElement("div");
+
+      stopItem.className =
+        "backup-stop-item";
+
+
+      const stopInfo =
+        document.createElement("div");
+
+      stopInfo.className =
+        "backup-stop-info";
+
+
+      const stopName =
+        document.createElement("p");
+
+      stopName.className =
+        "backup-stop-name";
+
+      stopName.textContent =
+        stop.name;
+
+
+      const stopAddress =
+        document.createElement("p");
+
+      stopAddress.className =
+        "backup-stop-address";
+
+      stopAddress.textContent =
+        stop.address;
+
+
+      stopInfo.append(
+        stopName,
+        stopAddress
+      );
+
+
+      const stopLink =
+        document.createElement("a");
+
+      stopLink.className =
+        "backup-stop-link";
+
+      stopLink.href =
+        stop.website;
+
+      stopLink.target =
+        "_blank";
+
+      stopLink.rel =
+        "noopener noreferrer";
+
+      stopLink.textContent = "↗";
+
+      stopLink.setAttribute(
+        "aria-label",
+        `Visit ${stop.name} website`
+      );
+
+
+      /*
+       * Don't let clicking the individual
+       * website link collapse the card.
+       */
+      stopLink.addEventListener(
+        "click",
+        function (event) {
+          event.stopPropagation();
+        }
+      );
+
+
+      stopItem.append(
+        stopInfo,
+        stopLink
+      );
+
+      stopsList.append(stopItem);
+    });
+
+
+    /* ---------- Expand / collapse ---------- */
+
+    card.addEventListener(
+      "click",
+      function () {
+
+        const opening =
+          stopsList.hidden;
+
+        stopsList.hidden =
+          !opening;
+
+        arrow.textContent =
+          opening ? "↑" : "↓";
+
+        card.classList.toggle(
+          "open",
+          opening
+        );
+      }
     );
 
-    grid.append(card);
-  });
+
+    card.append(stopsList);
+  }
+
+
+  grid.append(card);
+});
 
 
   /* Build backup section */
