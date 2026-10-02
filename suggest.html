@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Suggest Something | Bored in NYC</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar" aria-label="Main navigation">
+
+    <a
+      href="index.html"
+      class="site-name"
+      aria-label="Bored in NYC — go do something"
+    >
+
+      <span class="logo-main">
+        <span class="logo-bored">Bored</span>
+        <span class="logo-nyc">in NYC</span>
+      </span>
+
+      <span class="logo-tagline">
+        go do something.
+      </span>
+
+    </a>
+
+    <div class="nav-links">
+
+      <a class="nav-link" href="about.html">
+        About
+      </a>
+
+      <a class="nav-link" href="quiz.html">
+        Quiz
+      </a>
+
+      <a class="nav-link" href="browse.html">
+        Browse
+      </a>
+
+      <a class="nav-link" href="suggest.html">
+        Suggest
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <main class="suggest-page">
+
+    <section class="suggest-intro">
+
+      <p class="suggest-eyebrow">
+        YOUR TURN.
+      </p>
+
+      <h1>
+        Tell me what I'm<br>
+        missing.
+      </h1>
+
+      <p class="suggest-description">
+        Very likely that you know something I don't. If you have a weird
+        little place, activity, class, shop, or thing to do in NYC, please
+        send it my way!!
+      </p>
+
+    </section>
+
+
+    <form
+  class="suggest-form"
+  action="https://formspree.io/f/xvkgjnvk"
+  method="POST"
+>
+
+      <div class="suggest-field">
+        <label for="name">
+          What's the place or activity?
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="e.g. tiny pottery studio in Bushwick"
+          required
+        >
+      </div>
+
+
+      <div class="suggest-field">
+        <label for="neighborhood">
+          Where is it?
+        </label>
+
+        <input
+          type="text"
+          id="neighborhood"
+          name="neighborhood"
+          placeholder="Neighborhood, borough, whatever you know"
+        >
+      </div>
+
+
+      <div class="suggest-field">
+        <label for="link">
+          Got a link?
+        </label>
+
+        <input
+          type="url"
+          id="link"
+          name="link"
+          placeholder="Website, Instagram, TikTok..."
+        >
+      </div>
+
+
+      <div class="suggest-field">
+        <label for="reason">
+          Tell me about it.
+        </label>
+
+        <textarea
+          id="reason"
+          name="reason"
+          rows="5"
+          placeholder="What do you do there? Why is it worth adding?"
+        ></textarea>
+      </div>
+
+
+      <button type="submit" class="suggest-submit">
+        send it my way ↗
+      </button>
+
+    </form>
+
+  </main>
+<script src="suggest.js"></script>
+
+</body>
+</html>
