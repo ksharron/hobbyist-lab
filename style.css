@@ -1820,7 +1820,8 @@ body.browse-page .browse-main {
   margin-bottom: 58px;
 }
 
-.browse-eyebrow {
+.browse-eyebrow,
+.suggest-eyebrow {
   margin: 0 0 14px;
 
   color: #6f7d75;
@@ -1829,7 +1830,8 @@ body.browse-page .browse-main {
   letter-spacing: 0.16em;
 }
 
-body.browse-page .browse-intro h1 {
+body.browse-page .browse-intro h1,
+body.suggest-page-body .suggest-intro h1 {
   margin: 0;
 
   color: #243d35;
@@ -1840,8 +1842,8 @@ body.browse-page .browse-intro h1 {
   letter-spacing: -1px;
 }
 
-.browse-subtitle {
-  max-width: 570px;
+.browse-subtitle,
+.suggest-description {
   margin: 22px 0 0;
 
   color: #56645c;
@@ -4080,152 +4082,6 @@ body.browse-page a.browse-stop:hover {
   }
 
 }
-/* =========================
-   SUGGEST PAGE
-========================= */
-
-.suggest-page {
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 105px 32px 120px;
-}
-
-.suggest-intro {
-  max-width: 760px;
-  margin-bottom: 70px;
-}
-
-.suggest-eyebrow {
-  margin: 0 0 28px;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  color: #84918b;
-}
-
-.suggest-intro h1 {
-  margin: 0;
-  font-size: clamp(58px, 6vw, 94px);
-  line-height: 0.98;
-  letter-spacing: -0.055em;
-  color: #173e35;
-}
-
-.suggest-description {
-  max-width: 720px;
-  margin-top: 32px;
-  font-size: 20px;
-  line-height: 1.55;
-  color: #61736d;
-}
-
-
-/* FORM */
-
-.suggest-form {
-  max-width: 760px;
-}
-
-.suggest-field {
-  margin-bottom: 34px;
-}
-
-.suggest-field label {
-  display: block;
-  margin-bottom: 11px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #173e35;
-}
-
-.suggest-field input,
-.suggest-field textarea {
-  width: 100%;
-  box-sizing: border-box;
-
-  padding: 17px 18px;
-
-  border: 1px solid #c8cec9;
-  border-radius: 8px;
-
-  background: transparent;
-
-  font: inherit;
-  font-size: 16px;
-  color: #173e35;
-
-  outline: none;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.suggest-field textarea {
-  resize: vertical;
-  min-height: 140px;
-}
-
-.suggest-field input::placeholder,
-.suggest-field textarea::placeholder {
-  color: #98a39e;
-}
-
-.suggest-field input:focus,
-.suggest-field textarea:focus {
-  border-color: #173e35;
-  box-shadow: 0 0 0 2px rgba(23, 62, 53, 0.08);
-}
-
-
-/* SUBMIT BUTTON */
-
-.suggest-submit {
-  border: 0;
-  border-radius: 10px;
-
-  padding: 19px 28px;
-
-  background: #174f43;
-  color: #fff;
-
-  font: inherit;
-  font-size: 17px;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.15s ease,
-    opacity 0.15s ease;
-}
-
-.suggest-submit:hover {
-  transform: translateY(-2px);
-  opacity: 0.92;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-  .suggest-page {
-    padding: 65px 22px 90px;
-  }
-
-  .suggest-intro {
-    margin-bottom: 50px;
-  }
-
-  .suggest-intro h1 {
-    font-size: clamp(50px, 15vw, 68px);
-  }
-
-  .suggest-description {
-    font-size: 17px;
-  }
-
-}
 
 /* =========================
    SUGGEST FORM STATES
@@ -4312,5 +4168,298 @@ body.browse-page a.browse-stop:hover {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Make entire About suggestion area clickable */
+
+.suggestion-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.suggestion-card-link .suggestion-content {
+  cursor: pointer;
+}
+
+.suggestion-card-link .about-button {
+  display: inline-block;
+}
+
+.suggestion-card-link:hover .about-button {
+  transform: translateY(-2px);
+}
+
+.suggestion-card-link:hover h2 {
+  opacity: 0.85;
+}
+
+/* Suggest success buttons */
+
+.suggest-success-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.suggest-success-secondary {
+  color: #174f43;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.suggest-success-secondary:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .suggest-success-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
+/* =========================================================
+   SUGGEST PAGE
+   ========================================================= */
+
+body.suggest-page-body {
+  background: #f8f5ef;
+}
+
+
+/* Main page — same container as Browse */
+
+body.suggest-page-body .suggest-page {
+  width: min(100%, 1100px);
+  max-width: 1100px;
+
+  margin: 0 auto;
+  padding: 70px 32px 100px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.suggest-intro {
+  max-width: 1000px;
+}
+
+.suggest-description {
+  max-width: 650px;
+  margin: 22px 0 0;
+
+  color: #56645c;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* ---------- DIVIDER ---------- */
+
+.suggest-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 0 0 38px;
+
+  background: #d4d9d5;
+}
+
+
+/* ---------- FORM ---------- */
+
+.suggest-form {
+  width: 100%;
+  max-width: 760px;
+}
+
+.suggest-field {
+  margin-bottom: 30px;
+}
+
+.suggest-field label {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 15px;
+  font-weight: 700;
+  color: #173e35;
+}
+
+.suggest-field input,
+.suggest-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 16px 18px;
+
+  border: 1px solid #c8cec9;
+  border-radius: 8px;
+
+  background: transparent;
+
+  font: inherit;
+  font-size: 16px;
+  color: #173e35;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.suggest-field input {
+  height: 56px;
+}
+
+.suggest-field textarea {
+  min-height: 145px;
+  resize: vertical;
+}
+
+.suggest-field input::placeholder,
+.suggest-field textarea::placeholder {
+  color: #98a39e;
+}
+
+.suggest-field input:focus,
+.suggest-field textarea:focus {
+  border-color: #173e35;
+  box-shadow: 0 0 0 2px rgba(23, 62, 53, 0.08);
+}
+
+
+/* ---------- SUBMIT ---------- */
+
+.suggest-submit {
+  border: 0;
+  border-radius: 10px;
+
+  padding: 18px 26px;
+
+  background: #174f43;
+  color: #fff;
+
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
+}
+
+.suggest-submit:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+  .suggest-page {
+    padding: 45px 22px 90px;
+  }
+
+  .suggest-intro h1 {
+    font-size: clamp(44px, 13vw, 60px);
+  }
+
+  .suggest-description {
+    margin-top: 22px;
+    font-size: 17px;
+  }
+
+  .suggest-divider {
+    margin: 42px 0 34px;
+  }
+
+  .suggest-form {
+    max-width: none;
+  }
+
+  .suggest-submit {
+    width: 100%;
+  }
+}
+
+/* Small refinements to Suggest page */
+
+.suggest-page {
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 45px 32px 120px;
+  box-sizing: border-box;
+}
+
+
+.suggest-description {
+  max-width: 720px;
+  margin: 26px 0 0;
+
+  font-size: 18px;
+  line-height: 1.55;
+  color: #61736d;
+}
+
+.suggest-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 48px 0 42px;
+
+  background: #d4d9d5;
+}
+
+.suggest-form {
+  width: 100%;
+  max-width: 840px;
+}
+
+@media (max-width: 700px) {
+
+  body.suggest-page-body .suggest-page {
+    width: 100%;
+    padding: 45px 22px 80px;
+  }
+
+  .suggest-intro {
+    width: 100%;
+    margin-bottom: 42px;
+  }
+
+  .suggest-intro h1 {
+    font-size: clamp(44px, 13vw, 58px);
+  }
+
+  .suggest-description {
+    font-size: 17px;
+  }
+
+  .suggest-divider {
+    margin-bottom: 32px;
+  }
+
+  .suggest-form {
+    max-width: none;
+  }
+
+  .suggest-submit {
+    width: 100%;
   }
 }

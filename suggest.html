@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="suggest-page-body">
 
-  <nav class="navbar" aria-label="Main navigation">
+    <header>  <nav class="navbar" aria-label="Main navigation">
 
     <a
       href="index.html"
@@ -31,121 +31,94 @@
 
     </a>
 
-    <div class="nav-links">
+   <div class="nav-links">
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="quiz.html">Quiz</a>
+        <a class="nav-link" href="browse.html">Browse</a>
+        <a class="nav-link" href="suggest.html">Suggest</a>
+      </div>
 
-      <a class="nav-link" href="about.html">
-        About
-      </a>
-
-      <a class="nav-link" href="quiz.html">
-        Quiz
-      </a>
-
-      <a class="nav-link" href="browse.html">
-        Browse
-      </a>
-
-      <a class="nav-link" href="suggest.html">
-        Suggest
-      </a>
-
-    </div>
-
-  </nav>
-
+  </nav></header>
 
   <main class="suggest-page">
 
-    <section class="suggest-intro">
+  <section class="suggest-intro">
 
-      <p class="suggest-eyebrow">
-        YOUR TURN.
+    <p class="browse-eyebrow">
+        OPEN TO SUGGESTIONS!
       </p>
 
-      <h1>
-        Tell me what I'm<br>
-        missing.
+    <h1>
+        Tell me what I'm missing.
       </h1>
 
-      <p class="suggest-description">
-        Very likely that you know something I don't. If you have a weird
-        little place, activity, class, shop, or thing to do in NYC, please
-        send it my way!!
-      </p>
+    <p class="suggest-description">
+      Very likely that you know something I don't. If you have a weird little place,
+      activity, class, shop, or thing to do in NYC, please send it my way!!
+    </p>
 
-    </section>
+  </section>
 
+  <div class="suggest-divider"></div>
 
-    <form
-  class="suggest-form"
-  action="https://formspree.io/f/xvkgjnvk"
-  method="POST"
->
+  <form
+    class="suggest-form"
+    action="https://formspree.io/f/xvkgjnvk"
+    method="POST"
+  >
 
-      <div class="suggest-field">
-        <label for="name">
-          What's the place or activity?
-        </label>
+    <div class="suggest-field">
+      <label for="name">What's the place or activity?</label>
 
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="e.g. tiny pottery studio in Bushwick"
-          required
-        >
-      </div>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="e.g. tiny pottery studio in BK or art gallery in Queens"
+      >
+    </div>
 
+    <div class="suggest-field">
+      <label for="neighborhood">Where is it?</label>
 
-      <div class="suggest-field">
-        <label for="neighborhood">
-          Where is it?
-        </label>
+      <input
+        type="text"
+        id="neighborhood"
+        name="neighborhood"
+        placeholder="Neighborhood, borough, whatever you know"
+      >
+    </div>
 
-        <input
-          type="text"
-          id="neighborhood"
-          name="neighborhood"
-          placeholder="Neighborhood, borough, whatever you know"
-        >
-      </div>
+    <div class="suggest-field">
+      <label for="link">Got a link?</label>
 
+      <input
+        type="url"
+        id="link"
+        name="link"
+        placeholder="Website, Instagram, TikTok, Google Maps..."
+      >
+    </div>
 
-      <div class="suggest-field">
-        <label for="link">
-          Got a link?
-        </label>
+    <div class="suggest-field">
+      <label for="reason">Tell me about it.</label>
 
-        <input
-          type="url"
-          id="link"
-          name="link"
-          placeholder="Website, Instagram, TikTok..."
-        >
-      </div>
+      <textarea
+        id="reason"
+        name="reason"
+        rows="5"
+        placeholder="What do you do there? Why is it worth adding?"
+      ></textarea>
+    </div>
 
+    <button type="submit" class="suggest-submit">
+      send it my way ↗
+    </button>
 
-      <div class="suggest-field">
-        <label for="reason">
-          Tell me about it.
-        </label>
+  </form>
 
-        <textarea
-          id="reason"
-          name="reason"
-          rows="5"
-          placeholder="What do you do there? Why is it worth adding?"
-        ></textarea>
-      </div>
+</main>
 
-
-      <button type="submit" class="suggest-submit">
-        send it my way ↗
-      </button>
-
-    </form>
-
-  </main>
 <script src="suggest.js"></script>
 
 </body>
