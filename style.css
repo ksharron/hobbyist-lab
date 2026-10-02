@@ -3444,3 +3444,279 @@ body.browse-page a.browse-stop:hover {
   }
 
 }
+
+/* ===================================================
+   ABOUT PAGE — MOBILE RESET
+   MUST BE LAST THING IN STYLE.CSS
+   =================================================== */
+
+@media screen and (max-width: 700px) {
+
+  /* Prevent desktop sizing / horizontal overflow */
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .about-page {
+    width: 100%;
+    min-width: 0;
+  }
+
+
+  /* MAIN PAGE */
+
+  .about-main {
+    display: block;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: 45px 22px 80px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* HERO */
+
+  .about-hero {
+    width: 100%;
+    max-width: none;
+
+    margin: 0 0 55px;
+  }
+
+  .about-eyebrow {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    letter-spacing: 0.12em;
+  }
+
+  .about-hero h1 {
+    width: 100%;
+    max-width: none;
+
+    margin: 14px 0 0;
+
+    font-size: 3.4rem;
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+  }
+
+  .about-lede {
+    width: 100%;
+    max-width: none;
+
+    margin: 24px 0 0;
+
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+
+
+  /* IMAGE + TEXT */
+
+  .about-content-row {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: none;
+
+    gap: 45px;
+  }
+
+
+  /* ABOUT IMAGE */
+
+  .about-side-image {
+    width: 72%;
+    max-width: 280px;
+
+    margin: 0 auto;
+
+    transform: rotate(-2deg);
+  }
+
+  .about-side-image img {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about-side-image p {
+    margin-top: 10px;
+
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+
+  /* STORY */
+
+  .about-story {
+    display: block;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .about-story p {
+    width: 100%;
+    max-width: none;
+
+    margin: 0 0 24px;
+  }
+
+  .about-big-text {
+    font-size: 1.9rem !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.03em;
+  }
+
+
+  /* BIG ENDING */
+
+  .about-closing {
+    margin-top: 45px !important;
+
+    font-size: 2.7rem !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.04em;
+  }
+
+
+  /* SUGGESTION SECTION */
+
+  .suggestion-section {
+    width: 100%;
+    margin-top: 85px;
+  }
+
+  .suggestion-content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .suggestion-content h2 {
+    font-size: 2.7rem;
+    line-height: 1;
+  }
+
+  .suggestion-intro {
+    width: 100%;
+    max-width: none;
+
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .suggestion-button {
+    display: inline-block;
+    width: auto;
+  }
+
+
+  /* CREATIVE PROJECTS */
+
+  .creative-projects {
+    width: 100%;
+    margin-top: 90px;
+  }
+
+  .about-divider {
+    width: 100%;
+    margin-bottom: 55px;
+  }
+
+  .creative-projects-header {
+    width: 100%;
+    max-width: none;
+
+    margin-bottom: 40px;
+  }
+
+  .creative-projects-header h2 {
+    font-size: 2.8rem;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+  }
+
+  .creative-projects-intro {
+    width: 100%;
+    max-width: none;
+
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+
+  /* PROJECT GRID */
+
+  .creative-projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 55px;
+  }
+
+  .creative-project-card {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+  }
+
+  .creative-project-image {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .creative-project-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  .creative-project-info {
+    width: 100%;
+
+    padding-right: 35px;
+
+    box-sizing: border-box;
+  }
+
+  .creative-project-info h3 {
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+
+  .creative-project-info > p:not(.creative-project-type) {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+}
