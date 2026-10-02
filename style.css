@@ -3720,3 +3720,104 @@ body.browse-page a.browse-stop:hover {
   }
 
 }
+/* ===================================================
+   ABOUT MOBILE — SIZE TUNING
+   =================================================== */
+
+@media screen and (max-width: 700px) {
+
+  /* overall side margins */
+  .about-main {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+
+  /* TOP HERO */
+
+  .about-hero h1 {
+    font-size: 2.8rem;
+    line-height: 0.95;
+  }
+
+  .about-lede {
+    font-size: 1rem;
+  }
+
+
+  /* ABOUT IMAGE */
+
+  .about-side-image {
+    width: 55%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+
+  /* STORY */
+
+  .about-story {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-big-text {
+    font-size: 1.65rem !important;
+    line-height: 1.12 !important;
+  }
+
+  .about-closing {
+    font-size: 2.25rem !important;
+    line-height: 1 !important;
+  }
+
+
+  /* SUGGESTION SECTION */
+
+  .suggestion-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .suggestion-intro {
+    font-size: 0.95rem;
+  }
+
+
+  /* PROJECTS HEADER */
+
+  .creative-projects-header h2 {
+    font-size: 2.35rem;
+    line-height: 1;
+  }
+
+  .creative-projects-intro {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+
+  /* PROJECT CARDS */
+
+  .creative-projects-grid {
+    gap: 45px;
+  }
+
+  .creative-project-image {
+    aspect-ratio: 16 / 10;
+    border-radius: 10px;
+  }
+
+  .creative-project-info h3 {
+    font-size: 1.15rem;
+  }
+
+  .creative-project-info > p:not(.creative-project-type) {
+    font-size: 0.85rem;
+    line-height: 1.45;
+  }
+
+  .creative-project-type {
+    font-size: 0.65rem;
+  }
+
+}
